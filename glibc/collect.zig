@@ -22,7 +22,7 @@ pub fn main() !void {
         fatal("unable to parse '{s}': {s}", .{ ver_text, @errorName(err) });
     };
     const search_dir_path = try fs.path.join(arena, &.{ glibc_src_path, "sysdeps" });
-    const dest_dir_path = try std.fmt.allocPrint(arena, "glibc/{d}.{d}/sysdeps", .{
+    const dest_dir_path = try std.fmt.allocPrint(arena, "{d}.{d}/sysdeps", .{
         ver.major, ver.minor,
     });
 

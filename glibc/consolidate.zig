@@ -385,7 +385,7 @@ pub fn main() !void {
 
     //const args = try std.process.argsAlloc(arena);
 
-    var version_dir = try fs.cwd().openDir("glibc", .{.iterate = true});
+    var version_dir = try fs.cwd().openDir(".", .{.iterate = true});
     defer version_dir.close();
 
     const fs_versions = v: {
@@ -393,7 +393,7 @@ pub fn main() !void {
 
         var version_dir_it = version_dir.iterate();
         while (try version_dir_it.next()) |entry| {
-            if (mem.eql(u8, entry.name, "COPYING")) continue;
+            if (entry.kind != .directory) continue;
             try fs_versions.append(try Version.parse(entry.name));
         }
 
@@ -526,7 +526,7 @@ pub fn main() !void {
 
                 const max_bytes = 10 * 1024 * 1024;
                 const contents = version_dir.readFileAlloc(arena, abi_list_filename, max_bytes) catch |err| {
-                    fatal("unable to open glibc/{s}: {}", .{ abi_list_filename, err });
+                    fatal("unable to open {s}: {}", .{ abi_list_filename, err });
                 };
                 var lines_it = std.mem.tokenizeScalar(u8, contents, '\n');
                 while (lines_it.next()) |line| {
@@ -539,7 +539,7 @@ pub fn main() !void {
                     }
                     const ver = try Version.parse(ver_text["GLIBC_".len..]);
                     const name = tok_it.next() orelse {
-                        fatal("symbol name not found in glibc/{s} on line '{s}'", .{
+                        fatal("symbol name not found in {s} on line '{s}'", .{
                             abi_list_filename, line,
                         });
                     };
