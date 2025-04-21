@@ -1,0 +1,8 @@
+ symtab_create F
+ symtab_destroy F
+ backtrace_symbols_fd_fmt F
+ backtrace_symbols_fd F
+ backtrace_symbols_fmt F
+ symtab_find F
+ backtrace_symbols F
+ backtrace F

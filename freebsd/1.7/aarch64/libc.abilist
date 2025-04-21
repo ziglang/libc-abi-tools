@@ -1,0 +1,2328 @@
+FBSD_1.0 .mcount F
+FBSD_1.0 _CurrentRuneLocale D 0x8
+FBSD_1.0 _DefaultRuneLocale D 0x1080
+FBSD_1.0 _Exit F
+FBSD_1.0 ___runetype F
+FBSD_1.0 ___tolower F
+FBSD_1.0 ___toupper F
+FBSD_1.0 __acl_aclcheck_fd W F
+FBSD_1.0 __acl_aclcheck_file W F
+FBSD_1.0 __acl_aclcheck_link W F
+FBSD_1.0 __acl_delete_fd W F
+FBSD_1.0 __acl_delete_file W F
+FBSD_1.0 __acl_delete_link W F
+FBSD_1.0 __acl_get_fd W F
+FBSD_1.0 __acl_get_file W F
+FBSD_1.0 __acl_get_link W F
+FBSD_1.0 __acl_set_fd W F
+FBSD_1.0 __acl_set_file W F
+FBSD_1.0 __acl_set_link W F
+FBSD_1.0 __assert F
+FBSD_1.0 __b64_ntop F
+FBSD_1.0 __b64_pton F
+FBSD_1.0 __chk_fail F
+FBSD_1.0 __cxa_atexit F
+FBSD_1.0 __cxa_finalize F
+FBSD_1.0 __dn_comp F
+FBSD_1.0 __dn_count_labels F
+FBSD_1.0 __dn_expand F
+FBSD_1.0 __dn_skipname F
+FBSD_1.0 __error F
+FBSD_1.0 __flt_rounds F
+FBSD_1.0 __fp_nquery F
+FBSD_1.0 __fp_query F
+FBSD_1.0 __fp_resstat F
+FBSD_1.0 __fpclassifyd F
+FBSD_1.0 __fpclassifyf F
+FBSD_1.0 __fpclassifyl F
+FBSD_1.0 __getcwd W F
+FBSD_1.0 __h_errno F
+FBSD_1.0 __h_errno_set F
+FBSD_1.0 __hostalias F
+FBSD_1.0 __inet_addr F
+FBSD_1.0 __inet_aton F
+FBSD_1.0 __inet_cidr_ntop F
+FBSD_1.0 __inet_cidr_pton F
+FBSD_1.0 __inet_lnaof F
+FBSD_1.0 __inet_makeaddr F
+FBSD_1.0 __inet_net_ntop F
+FBSD_1.0 __inet_net_pton F
+FBSD_1.0 __inet_neta F
+FBSD_1.0 __inet_netof F
+FBSD_1.0 __inet_network F
+FBSD_1.0 __inet_nsap_addr F
+FBSD_1.0 __inet_nsap_ntoa F
+FBSD_1.0 __inet_ntoa F
+FBSD_1.0 __inet_ntoa_r F
+FBSD_1.0 __inet_ntop F
+FBSD_1.0 __inet_pton F
+FBSD_1.0 __infinity D 0x8
+FBSD_1.0 __isctype F
+FBSD_1.0 __isinf F
+FBSD_1.0 __isinff F
+FBSD_1.0 __isinfl F
+FBSD_1.0 __isnan F
+FBSD_1.0 __isnanf F
+FBSD_1.0 __isthreaded D 0x4
+FBSD_1.0 __istype F
+FBSD_1.0 __loc_aton F
+FBSD_1.0 __loc_ntoa F
+FBSD_1.0 __mac_execve W F
+FBSD_1.0 __mac_get_fd W F
+FBSD_1.0 __mac_get_file W F
+FBSD_1.0 __mac_get_link W F
+FBSD_1.0 __mac_get_pid W F
+FBSD_1.0 __mac_get_proc W F
+FBSD_1.0 __mac_set_fd W F
+FBSD_1.0 __mac_set_file W F
+FBSD_1.0 __mac_set_link W F
+FBSD_1.0 __mac_set_proc W F
+FBSD_1.0 __maskrune F
+FBSD_1.0 __mb_cur_max D 0x4
+FBSD_1.0 __mb_sb_limit D 0x4
+FBSD_1.0 __nan D 0x4
+FBSD_1.0 __ns_format_ttl F
+FBSD_1.0 __ns_get16 F
+FBSD_1.0 __ns_get32 F
+FBSD_1.0 __ns_initparse F
+FBSD_1.0 __ns_makecanon F
+FBSD_1.0 __ns_msg_getflag F
+FBSD_1.0 __ns_name_compress F
+FBSD_1.0 __ns_name_ntol F
+FBSD_1.0 __ns_name_ntop F
+FBSD_1.0 __ns_name_pack F
+FBSD_1.0 __ns_name_pton F
+FBSD_1.0 __ns_name_rollback F
+FBSD_1.0 __ns_name_skip F
+FBSD_1.0 __ns_name_uncompress F
+FBSD_1.0 __ns_name_unpack F
+FBSD_1.0 __ns_parse_ttl F
+FBSD_1.0 __ns_parserr F
+FBSD_1.0 __ns_put16 F
+FBSD_1.0 __ns_put32 F
+FBSD_1.0 __ns_samedomain F
+FBSD_1.0 __ns_samename F
+FBSD_1.0 __ns_skiprr F
+FBSD_1.0 __ns_sprintrr F
+FBSD_1.0 __ns_sprintrrf F
+FBSD_1.0 __nsdefaultsrc D 0x20
+FBSD_1.0 __p_cdname F
+FBSD_1.0 __p_cdnname F
+FBSD_1.0 __p_cert_syms D 0x90
+FBSD_1.0 __p_class F
+FBSD_1.0 __p_class_syms D 0xC0
+FBSD_1.0 __p_fqname F
+FBSD_1.0 __p_fqnname F
+FBSD_1.0 __p_key_syms D 0x90
+FBSD_1.0 __p_option F
+FBSD_1.0 __p_query F
+FBSD_1.0 __p_rcode F
+FBSD_1.0 __p_rcode_syms D 0x180
+FBSD_1.0 __p_secstodate F
+FBSD_1.0 __p_section F
+FBSD_1.0 __p_sockun F
+FBSD_1.0 __p_time F
+FBSD_1.0 __p_type F
+FBSD_1.0 __p_type_syms D 0x678
+FBSD_1.0 __putlong F
+FBSD_1.0 __putshort F
+FBSD_1.0 __res_close F
+FBSD_1.0 __res_dnok F
+FBSD_1.0 __res_findzonecut2 F
+FBSD_1.0 __res_freeupdrec F
+FBSD_1.0 __res_getservers F
+FBSD_1.0 __res_hnok F
+FBSD_1.0 __res_hostalias F
+FBSD_1.0 __res_init F
+FBSD_1.0 __res_isourserver F
+FBSD_1.0 __res_mailok F
+FBSD_1.0 __res_mkquery F
+FBSD_1.0 __res_mkupdate F
+FBSD_1.0 __res_mkupdrec F
+FBSD_1.0 __res_nameinquery F
+FBSD_1.0 __res_nametoclass F
+FBSD_1.0 __res_nametotype F
+FBSD_1.0 __res_nclose F
+FBSD_1.0 __res_ndestroy F
+FBSD_1.0 __res_ninit F
+FBSD_1.0 __res_nmkquery F
+FBSD_1.0 __res_nmkupdate F
+FBSD_1.0 __res_nopt F
+FBSD_1.0 __res_nquery F
+FBSD_1.0 __res_nquerydomain F
+FBSD_1.0 __res_nsearch F
+FBSD_1.0 __res_nsend F
+FBSD_1.0 __res_nupdate F
+FBSD_1.0 __res_opt F
+FBSD_1.0 __res_ourserver_p F
+FBSD_1.0 __res_ownok F
+FBSD_1.0 __res_pquery F
+FBSD_1.0 __res_queriesmatch F
+FBSD_1.0 __res_query F
+FBSD_1.0 __res_querydomain F
+FBSD_1.0 __res_randomid F
+FBSD_1.0 __res_search F
+FBSD_1.0 __res_send F
+FBSD_1.0 __res_setservers F
+FBSD_1.0 __res_state F
+FBSD_1.0 __res_update F
+FBSD_1.0 __res_vinit F
+FBSD_1.0 __rpc_createerr F
+FBSD_1.0 __rpc_endconf F
+FBSD_1.0 __rpc_fd2sockinfo F
+FBSD_1.0 __rpc_get_local_uid F
+FBSD_1.0 __rpc_get_t_size F
+FBSD_1.0 __rpc_getconf F
+FBSD_1.0 __rpc_getconfip F
+FBSD_1.0 __rpc_nconf2fd F
+FBSD_1.0 __rpc_nconf2sockinfo F
+FBSD_1.0 __rpc_rawcombuf D 0x8
+FBSD_1.0 __rpc_setconf F
+FBSD_1.0 __sbistype F
+FBSD_1.0 __sbmaskrune F
+FBSD_1.0 __sbtolower F
+FBSD_1.0 __sbtoupper F
+FBSD_1.0 __setugid W F
+FBSD_1.0 __srget F
+FBSD_1.0 __stack_chk_fail F
+FBSD_1.0 __stack_chk_fail_local F
+FBSD_1.0 __stack_chk_guard D 0x40
+FBSD_1.0 __stderrp D 0x8
+FBSD_1.0 __stdinp D 0x8
+FBSD_1.0 __stdoutp D 0x8
+FBSD_1.0 __swbuf F
+FBSD_1.0 __sym_ntop F
+FBSD_1.0 __sym_ntos F
+FBSD_1.0 __sym_ston F
+FBSD_1.0 __syscall W F
+FBSD_1.0 __sysctl W F
+FBSD_1.0 __tls_get_addr W F
+FBSD_1.0 __tolower F
+FBSD_1.0 __toupper F
+FBSD_1.0 __wcwidth F
+FBSD_1.0 __xuname F
+FBSD_1.0 _authenticate F
+FBSD_1.0 _exit W F
+FBSD_1.0 _getlong F
+FBSD_1.0 _getprogname F
+FBSD_1.0 _getshort F
+FBSD_1.0 _init_tls F
+FBSD_1.0 _int_to_time F
+FBSD_1.0 _long_to_time F
+FBSD_1.0 _longjmp F
+FBSD_1.0 _malloc_message D 0x8
+FBSD_1.0 _malloc_options D 0x8
+FBSD_1.0 _mcleanup F
+FBSD_1.0 _ns_flagdata D 0x80
+FBSD_1.0 _nsdbtaddsrc F
+FBSD_1.0 _nsdbtput F
+FBSD_1.0 _null_auth D 0x18
+FBSD_1.0 _res D 0x228
+FBSD_1.0 _res_close W F
+FBSD_1.0 _rpc_dtablesize F
+FBSD_1.0 _seterr_reply F
+FBSD_1.0 _setjmp F
+FBSD_1.0 _svcauth_des F
+FBSD_1.0 _svcauth_null F
+FBSD_1.0 _svcauth_short F
+FBSD_1.0 _svcauth_unix F
+FBSD_1.0 _time32_to_time F
+FBSD_1.0 _time64_to_time F
+FBSD_1.0 _time_to_int F
+FBSD_1.0 _time_to_long F
+FBSD_1.0 _time_to_time32 F
+FBSD_1.0 _time_to_time64 F
+FBSD_1.0 _umtx_op W F
+FBSD_1.0 _yp_check F
+FBSD_1.0 _yp_dobind F
+FBSD_1.0 a64l F
+FBSD_1.0 abort F
+FBSD_1.0 abort2 W F
+FBSD_1.0 abs F
+FBSD_1.0 accept W F
+FBSD_1.0 access W F
+FBSD_1.0 acct W F
+FBSD_1.0 acl_add_perm F
+FBSD_1.0 acl_calc_mask F
+FBSD_1.0 acl_clear_perms F
+FBSD_1.0 acl_copy_entry F
+FBSD_1.0 acl_copy_ext F
+FBSD_1.0 acl_copy_int F
+FBSD_1.0 acl_create_entry F
+FBSD_1.0 acl_delete_def_file F
+FBSD_1.0 acl_delete_def_link_np F
+FBSD_1.0 acl_delete_entry F
+FBSD_1.0 acl_delete_fd_np F
+FBSD_1.0 acl_delete_file_np F
+FBSD_1.0 acl_delete_link_np F
+FBSD_1.0 acl_delete_perm F
+FBSD_1.0 acl_dup F
+FBSD_1.0 acl_free F
+FBSD_1.0 acl_from_text F
+FBSD_1.0 acl_get_entry F
+FBSD_1.0 acl_get_fd F
+FBSD_1.0 acl_get_fd_np F
+FBSD_1.0 acl_get_file F
+FBSD_1.0 acl_get_link_np F
+FBSD_1.0 acl_get_perm_np F
+FBSD_1.0 acl_get_permset F
+FBSD_1.0 acl_get_qualifier F
+FBSD_1.0 acl_get_tag_type F
+FBSD_1.0 acl_init F
+FBSD_1.0 acl_set_fd F
+FBSD_1.0 acl_set_fd_np F
+FBSD_1.0 acl_set_file F
+FBSD_1.0 acl_set_link_np F
+FBSD_1.0 acl_set_permset F
+FBSD_1.0 acl_set_qualifier F
+FBSD_1.0 acl_set_tag_type F
+FBSD_1.0 acl_to_text F
+FBSD_1.0 acl_valid F
+FBSD_1.0 acl_valid_fd_np F
+FBSD_1.0 acl_valid_file_np F
+FBSD_1.0 acl_valid_link_np F
+FBSD_1.0 adjtime W F
+FBSD_1.0 aio_cancel W F
+FBSD_1.0 aio_error W F
+FBSD_1.0 aio_fsync W F
+FBSD_1.0 aio_read W F
+FBSD_1.0 aio_return W F
+FBSD_1.0 aio_suspend W F
+FBSD_1.0 aio_waitcomplete W F
+FBSD_1.0 aio_write W F
+FBSD_1.0 alarm F
+FBSD_1.0 alphasort F
+FBSD_1.0 arc4random F
+FBSD_1.0 arc4random_addrandom F
+FBSD_1.0 arc4random_stir F
+FBSD_1.0 asctime F
+FBSD_1.0 asctime_r F
+FBSD_1.0 asprintf F
+FBSD_1.0 atexit F
+FBSD_1.0 atof F
+FBSD_1.0 atoi F
+FBSD_1.0 atol F
+FBSD_1.0 atoll F
+FBSD_1.0 audit W F
+FBSD_1.0 auditctl W F
+FBSD_1.0 auditon W F
+FBSD_1.0 authdes_create F
+FBSD_1.0 authdes_getucred F
+FBSD_1.0 authdes_pk_seccreate F
+FBSD_1.0 authdes_seccreate F
+FBSD_1.0 authnone_create F
+FBSD_1.0 authunix_create F
+FBSD_1.0 authunix_create_default F
+FBSD_1.0 basename F
+FBSD_1.0 bcmp F
+FBSD_1.0 bcopy F
+FBSD_1.0 bind W F
+FBSD_1.0 bindresvport F
+FBSD_1.0 bindresvport_sa F
+FBSD_1.0 bsearch F
+FBSD_1.0 btowc F
+FBSD_1.0 bzero F
+FBSD_1.0 calloc W F
+FBSD_1.0 callrpc F
+FBSD_1.0 catclose F
+FBSD_1.0 catgets F
+FBSD_1.0 catopen F
+FBSD_1.0 cbc_crypt F
+FBSD_1.0 cfgetispeed F
+FBSD_1.0 cfgetospeed F
+FBSD_1.0 cfmakeraw F
+FBSD_1.0 cfsetispeed F
+FBSD_1.0 cfsetospeed F
+FBSD_1.0 cfsetspeed F
+FBSD_1.0 cgetcap F
+FBSD_1.0 cgetclose F
+FBSD_1.0 cgetent F
+FBSD_1.0 cgetfirst F
+FBSD_1.0 cgetmatch F
+FBSD_1.0 cgetnext F
+FBSD_1.0 cgetnum F
+FBSD_1.0 cgetset F
+FBSD_1.0 cgetstr F
+FBSD_1.0 cgetustr F
+FBSD_1.0 chdir W F
+FBSD_1.0 check_utility_compat F
+FBSD_1.0 chflags W F
+FBSD_1.0 chmod W F
+FBSD_1.0 chown W F
+FBSD_1.0 chroot W F
+FBSD_1.0 clearerr F
+FBSD_1.0 clearerr_unlocked F
+FBSD_1.0 clnt_broadcast F
+FBSD_1.0 clnt_create F
+FBSD_1.0 clnt_create_timed F
+FBSD_1.0 clnt_create_vers F
+FBSD_1.0 clnt_create_vers_timed F
+FBSD_1.0 clnt_dg_create F
+FBSD_1.0 clnt_pcreateerror F
+FBSD_1.0 clnt_perrno F
+FBSD_1.0 clnt_perror F
+FBSD_1.0 clnt_raw_create F
+FBSD_1.0 clnt_spcreateerror F
+FBSD_1.0 clnt_sperrno F
+FBSD_1.0 clnt_sperror F
+FBSD_1.0 clnt_tli_create F
+FBSD_1.0 clnt_tp_create F
+FBSD_1.0 clnt_tp_create_timed F
+FBSD_1.0 clnt_vc_create F
+FBSD_1.0 clntraw_create F
+FBSD_1.0 clnttcp_create F
+FBSD_1.0 clntudp_bufcreate F
+FBSD_1.0 clntudp_create F
+FBSD_1.0 clntunix_create F
+FBSD_1.0 clock F
+FBSD_1.0 clock_getres W F
+FBSD_1.0 clock_gettime W F
+FBSD_1.0 clock_settime W F
+FBSD_1.0 close W F
+FBSD_1.0 closedir F
+FBSD_1.0 closelog F
+FBSD_1.0 confstr F
+FBSD_1.0 connect W F
+FBSD_1.0 creat W F
+FBSD_1.0 ctermid F
+FBSD_1.0 ctermid_r F
+FBSD_1.0 ctime F
+FBSD_1.0 ctime_r F
+FBSD_1.0 daemon F
+FBSD_1.0 dbm_clearerr F
+FBSD_1.0 dbm_close F
+FBSD_1.0 dbm_delete F
+FBSD_1.0 dbm_dirfno F
+FBSD_1.0 dbm_error F
+FBSD_1.0 dbm_fetch F
+FBSD_1.0 dbm_firstkey F
+FBSD_1.0 dbm_nextkey F
+FBSD_1.0 dbm_open F
+FBSD_1.0 dbm_store F
+FBSD_1.0 dbopen F
+FBSD_1.0 des_cipher F
+FBSD_1.0 des_crypt_1 F
+FBSD_1.0 des_setkey F
+FBSD_1.0 des_setparity F
+FBSD_1.0 devname F
+FBSD_1.0 devname_r F
+FBSD_1.0 difftime F
+FBSD_1.0 digittoint F
+FBSD_1.0 dirname F
+FBSD_1.0 div F
+FBSD_1.0 dl_iterate_phdr W F
+FBSD_1.0 dladdr W F
+FBSD_1.0 dlclose W F
+FBSD_1.0 dlerror W F
+FBSD_1.0 dlfunc W F
+FBSD_1.0 dlinfo W F
+FBSD_1.0 dllockinit W F
+FBSD_1.0 dlopen W F
+FBSD_1.0 dlsym W F
+FBSD_1.0 dlvsym W F
+FBSD_1.0 dn_comp W F
+FBSD_1.0 dn_count_labels W F
+FBSD_1.0 dn_expand W F
+FBSD_1.0 drand48 F
+FBSD_1.0 dup W F
+FBSD_1.0 dup2 W F
+FBSD_1.0 eaccess W F
+FBSD_1.0 ecb_crypt F
+FBSD_1.0 encrypt F
+FBSD_1.0 endfsent F
+FBSD_1.0 endgrent F
+FBSD_1.0 endhostent F
+FBSD_1.0 endnetconfig F
+FBSD_1.0 endnetent F
+FBSD_1.0 endnetgrent F
+FBSD_1.0 endnetpath F
+FBSD_1.0 endprotoent F
+FBSD_1.0 endpwent F
+FBSD_1.0 endrpcent F
+FBSD_1.0 endservent F
+FBSD_1.0 endttyent F
+FBSD_1.0 endusershell F
+FBSD_1.0 erand48 F
+FBSD_1.0 err W F
+FBSD_1.0 err_set_exit F
+FBSD_1.0 err_set_file F
+FBSD_1.0 errc F
+FBSD_1.0 errno D 0x4
+FBSD_1.0 errx F
+FBSD_1.0 ether_aton F
+FBSD_1.0 ether_aton_r F
+FBSD_1.0 ether_hostton F
+FBSD_1.0 ether_line F
+FBSD_1.0 ether_ntoa F
+FBSD_1.0 ether_ntoa_r F
+FBSD_1.0 ether_ntohost F
+FBSD_1.0 eui64_aton F
+FBSD_1.0 eui64_hostton F
+FBSD_1.0 eui64_ntoa F
+FBSD_1.0 eui64_ntohost F
+FBSD_1.0 execl F
+FBSD_1.0 execle F
+FBSD_1.0 execlp F
+FBSD_1.0 exect F
+FBSD_1.0 execv F
+FBSD_1.0 execvP F
+FBSD_1.0 execve W F
+FBSD_1.0 execvp F
+FBSD_1.0 exit F
+FBSD_1.0 extattr_delete_fd W F
+FBSD_1.0 extattr_delete_file W F
+FBSD_1.0 extattr_delete_link W F
+FBSD_1.0 extattr_get_fd W F
+FBSD_1.0 extattr_get_file W F
+FBSD_1.0 extattr_get_link W F
+FBSD_1.0 extattr_list_fd W F
+FBSD_1.0 extattr_list_file W F
+FBSD_1.0 extattr_list_link W F
+FBSD_1.0 extattr_namespace_to_string F
+FBSD_1.0 extattr_set_fd W F
+FBSD_1.0 extattr_set_file W F
+FBSD_1.0 extattr_set_link W F
+FBSD_1.0 extattr_string_to_namespace F
+FBSD_1.0 extattrctl W F
+FBSD_1.0 f_prealloc F
+FBSD_1.0 fabs F
+FBSD_1.0 fchdir W F
+FBSD_1.0 fchflags W F
+FBSD_1.0 fchmod W F
+FBSD_1.0 fchown W F
+FBSD_1.0 fclose F
+FBSD_1.0 fcloseall W F
+FBSD_1.0 fcntl W F
+FBSD_1.0 fdopen F
+FBSD_1.0 feof F
+FBSD_1.0 feof_unlocked F
+FBSD_1.0 ferror F
+FBSD_1.0 ferror_unlocked F
+FBSD_1.0 fflagstostr F
+FBSD_1.0 fflush F
+FBSD_1.0 ffs F
+FBSD_1.0 ffsl F
+FBSD_1.0 fgetc F
+FBSD_1.0 fgetln F
+FBSD_1.0 fgetpos F
+FBSD_1.0 fgets F
+FBSD_1.0 fgetwc F
+FBSD_1.0 fgetwln F
+FBSD_1.0 fgetws F
+FBSD_1.0 fhopen W F
+FBSD_1.0 fhstat W F
+FBSD_1.0 fhstatfs W F
+FBSD_1.0 fileno F
+FBSD_1.0 fileno_unlocked F
+FBSD_1.0 flock W F
+FBSD_1.0 flockfile W F
+FBSD_1.0 fls F
+FBSD_1.0 flsl F
+FBSD_1.0 fmtcheck W F
+FBSD_1.0 fmtmsg F
+FBSD_1.0 fnmatch F
+FBSD_1.0 fopen F
+FBSD_1.0 fork W F
+FBSD_1.0 fp_resstat W F
+FBSD_1.0 fpathconf W F
+FBSD_1.0 fpgetmask F
+FBSD_1.0 fprintf F
+FBSD_1.0 fpsetmask F
+FBSD_1.0 fpurge F
+FBSD_1.0 fputc F
+FBSD_1.0 fputs F
+FBSD_1.0 fputwc F
+FBSD_1.0 fputws F
+FBSD_1.0 fread F
+FBSD_1.0 free W F
+FBSD_1.0 freeaddrinfo F
+FBSD_1.0 freehostent F
+FBSD_1.0 freeifaddrs F
+FBSD_1.0 freeifmaddrs F
+FBSD_1.0 freenetconfigent F
+FBSD_1.0 freopen F
+FBSD_1.0 frexp F
+FBSD_1.0 fscanf F
+FBSD_1.0 fseek F
+FBSD_1.0 fseeko F
+FBSD_1.0 fsetpos F
+FBSD_1.0 fstat W F
+FBSD_1.0 fstatfs W F
+FBSD_1.0 fstatvfs F
+FBSD_1.0 fsync F
+FBSD_1.0 ftell F
+FBSD_1.0 ftello F
+FBSD_1.0 ftok F
+FBSD_1.0 ftruncate W F
+FBSD_1.0 ftrylockfile W F
+FBSD_1.0 fts_children F
+FBSD_1.0 fts_close F
+FBSD_1.0 fts_get_clientptr F
+FBSD_1.0 fts_get_stream F
+FBSD_1.0 fts_open F
+FBSD_1.0 fts_read F
+FBSD_1.0 fts_set F
+FBSD_1.0 fts_set_clientptr F
+FBSD_1.0 ftw F
+FBSD_1.0 funlockfile W F
+FBSD_1.0 funopen F
+FBSD_1.0 futimes W F
+FBSD_1.0 fwide F
+FBSD_1.0 fwprintf F
+FBSD_1.0 fwrite F
+FBSD_1.0 fwscanf F
+FBSD_1.0 gai_strerror F
+FBSD_1.0 get_myaddress F
+FBSD_1.0 getaddrinfo F
+FBSD_1.0 getaudit W F
+FBSD_1.0 getaudit_addr W F
+FBSD_1.0 getauid W F
+FBSD_1.0 getbootfile F
+FBSD_1.0 getbsize F
+FBSD_1.0 getc F
+FBSD_1.0 getc_unlocked F
+FBSD_1.0 getchar F
+FBSD_1.0 getchar_unlocked F
+FBSD_1.0 getcontext W F
+FBSD_1.0 getcwd F
+FBSD_1.0 getdents W F
+FBSD_1.0 getdirentries W F
+FBSD_1.0 getdiskbyname F
+FBSD_1.0 getdomainname F
+FBSD_1.0 getdtablesize W F
+FBSD_1.0 getegid W F
+FBSD_1.0 getenv F
+FBSD_1.0 geteuid W F
+FBSD_1.0 getfh W F
+FBSD_1.0 getfsent F
+FBSD_1.0 getfsfile F
+FBSD_1.0 getfsspec F
+FBSD_1.0 getfsstat W F
+FBSD_1.0 getfstab F
+FBSD_1.0 getgid W F
+FBSD_1.0 getgrent F
+FBSD_1.0 getgrent_r F
+FBSD_1.0 getgrgid F
+FBSD_1.0 getgrgid_r F
+FBSD_1.0 getgrnam F
+FBSD_1.0 getgrnam_r F
+FBSD_1.0 getgrouplist F
+FBSD_1.0 getgroups W F
+FBSD_1.0 gethostbyaddr F
+FBSD_1.0 gethostbyaddr_r F
+FBSD_1.0 gethostbyname F
+FBSD_1.0 gethostbyname2 F
+FBSD_1.0 gethostbyname2_r F
+FBSD_1.0 gethostbyname_r F
+FBSD_1.0 gethostent F
+FBSD_1.0 gethostent_r F
+FBSD_1.0 gethostid F
+FBSD_1.0 gethostname F
+FBSD_1.0 getifaddrs F
+FBSD_1.0 getifmaddrs F
+FBSD_1.0 getipnodebyaddr F
+FBSD_1.0 getipnodebyname F
+FBSD_1.0 getipv4sourcefilter F
+FBSD_1.0 getitimer W F
+FBSD_1.0 getloadavg F
+FBSD_1.0 getlogin F
+FBSD_1.0 getlogin_r F
+FBSD_1.0 getmntinfo F
+FBSD_1.0 getmode F
+FBSD_1.0 getnameinfo F
+FBSD_1.0 getnetbyaddr F
+FBSD_1.0 getnetbyaddr_r F
+FBSD_1.0 getnetbyname F
+FBSD_1.0 getnetbyname_r F
+FBSD_1.0 getnetconfig F
+FBSD_1.0 getnetconfigent F
+FBSD_1.0 getnetent F
+FBSD_1.0 getnetent_r F
+FBSD_1.0 getnetgrent F
+FBSD_1.0 getnetname F
+FBSD_1.0 getnetpath F
+FBSD_1.0 getopt F
+FBSD_1.0 getopt_long F
+FBSD_1.0 getopt_long_only F
+FBSD_1.0 getosreldate F
+FBSD_1.0 getpagesize F
+FBSD_1.0 getpass F
+FBSD_1.0 getpeereid F
+FBSD_1.0 getpeername W F
+FBSD_1.0 getpgid W F
+FBSD_1.0 getpgrp W F
+FBSD_1.0 getpid W F
+FBSD_1.0 getppid W F
+FBSD_1.0 getpriority W F
+FBSD_1.0 getprogname W F
+FBSD_1.0 getprotobyname F
+FBSD_1.0 getprotobyname_r F
+FBSD_1.0 getprotobynumber F
+FBSD_1.0 getprotobynumber_r F
+FBSD_1.0 getprotoent F
+FBSD_1.0 getprotoent_r F
+FBSD_1.0 getpublicandprivatekey F
+FBSD_1.0 getpublickey F
+FBSD_1.0 getpwent F
+FBSD_1.0 getpwent_r F
+FBSD_1.0 getpwnam F
+FBSD_1.0 getpwnam_r F
+FBSD_1.0 getpwuid F
+FBSD_1.0 getpwuid_r F
+FBSD_1.0 getresgid W F
+FBSD_1.0 getresuid W F
+FBSD_1.0 getrlimit W F
+FBSD_1.0 getrpcbyname F
+FBSD_1.0 getrpcbynumber F
+FBSD_1.0 getrpcent F
+FBSD_1.0 getrpcport F
+FBSD_1.0 getrusage W F
+FBSD_1.0 gets F
+FBSD_1.0 getservbyname F
+FBSD_1.0 getservbyname_r F
+FBSD_1.0 getservbyport F
+FBSD_1.0 getservbyport_r F
+FBSD_1.0 getservent F
+FBSD_1.0 getservent_r F
+FBSD_1.0 getsid W F
+FBSD_1.0 getsockname W F
+FBSD_1.0 getsockopt W F
+FBSD_1.0 getsourcefilter F
+FBSD_1.0 getsubopt F
+FBSD_1.0 gettimeofday W F
+FBSD_1.0 getttyent F
+FBSD_1.0 getttynam F
+FBSD_1.0 getuid W F
+FBSD_1.0 getusershell F
+FBSD_1.0 getvfsbyname F
+FBSD_1.0 getw F
+FBSD_1.0 getwc F
+FBSD_1.0 getwchar F
+FBSD_1.0 getwd F
+FBSD_1.0 glob F
+FBSD_1.0 globfree F
+FBSD_1.0 gmtime F
+FBSD_1.0 gmtime_r F
+FBSD_1.0 grantpt F
+FBSD_1.0 group_from_gid F
+FBSD_1.0 h_errlist D 0x28
+FBSD_1.0 h_errno D 0x4
+FBSD_1.0 hcreate F
+FBSD_1.0 hdestroy F
+FBSD_1.0 heapsort F
+FBSD_1.0 herror F
+FBSD_1.0 host2netname F
+FBSD_1.0 hsearch F
+FBSD_1.0 hstrerror F
+FBSD_1.0 htonl F
+FBSD_1.0 htons F
+FBSD_1.0 if_freenameindex F
+FBSD_1.0 if_indextoname F
+FBSD_1.0 if_nameindex F
+FBSD_1.0 if_nametoindex F
+FBSD_1.0 imaxabs F
+FBSD_1.0 imaxdiv F
+FBSD_1.0 in6addr_any D 0x10
+FBSD_1.0 in6addr_linklocal_allnodes D 0x10
+FBSD_1.0 in6addr_loopback D 0x10
+FBSD_1.0 in6addr_nodelocal_allnodes D 0x10
+FBSD_1.0 index W F
+FBSD_1.0 inet6_opt_append F
+FBSD_1.0 inet6_opt_find F
+FBSD_1.0 inet6_opt_finish F
+FBSD_1.0 inet6_opt_get_val F
+FBSD_1.0 inet6_opt_init F
+FBSD_1.0 inet6_opt_next F
+FBSD_1.0 inet6_opt_set_val F
+FBSD_1.0 inet6_option_alloc F
+FBSD_1.0 inet6_option_append F
+FBSD_1.0 inet6_option_find F
+FBSD_1.0 inet6_option_init F
+FBSD_1.0 inet6_option_next F
+FBSD_1.0 inet6_option_space F
+FBSD_1.0 inet6_rth_add F
+FBSD_1.0 inet6_rth_getaddr F
+FBSD_1.0 inet6_rth_init F
+FBSD_1.0 inet6_rth_reverse F
+FBSD_1.0 inet6_rth_segments F
+FBSD_1.0 inet6_rth_space F
+FBSD_1.0 inet6_rthdr_add F
+FBSD_1.0 inet6_rthdr_getaddr F
+FBSD_1.0 inet6_rthdr_getflags F
+FBSD_1.0 inet6_rthdr_init F
+FBSD_1.0 inet6_rthdr_lasthop F
+FBSD_1.0 inet6_rthdr_segments F
+FBSD_1.0 inet6_rthdr_space F
+FBSD_1.0 inet_addr W F
+FBSD_1.0 inet_aton W F
+FBSD_1.0 inet_lnaof W F
+FBSD_1.0 inet_makeaddr W F
+FBSD_1.0 inet_net_ntop W F
+FBSD_1.0 inet_net_pton W F
+FBSD_1.0 inet_neta W F
+FBSD_1.0 inet_netof W F
+FBSD_1.0 inet_network W F
+FBSD_1.0 inet_nsap_addr W F
+FBSD_1.0 inet_nsap_ntoa W F
+FBSD_1.0 inet_ntoa W F
+FBSD_1.0 inet_ntoa_r W F
+FBSD_1.0 inet_ntop W F
+FBSD_1.0 inet_pton W F
+FBSD_1.0 initgroups F
+FBSD_1.0 initstate F
+FBSD_1.0 innetgr F
+FBSD_1.0 insque F
+FBSD_1.0 ioctl W F
+FBSD_1.0 iruserok F
+FBSD_1.0 iruserok_sa F
+FBSD_1.0 isalnum F
+FBSD_1.0 isalpha F
+FBSD_1.0 isascii F
+FBSD_1.0 isatty F
+FBSD_1.0 isblank F
+FBSD_1.0 iscntrl F
+FBSD_1.0 isdialuptty F
+FBSD_1.0 isdigit F
+FBSD_1.0 isgraph F
+FBSD_1.0 ishexnumber F
+FBSD_1.0 isideogram F
+FBSD_1.0 isinf W F
+FBSD_1.0 islower F
+FBSD_1.0 isnan W F
+FBSD_1.0 isnanf W F
+FBSD_1.0 isnettty F
+FBSD_1.0 isnumber F
+FBSD_1.0 isphonogram F
+FBSD_1.0 isprint F
+FBSD_1.0 ispunct F
+FBSD_1.0 isrune F
+FBSD_1.0 issetugid W F
+FBSD_1.0 isspace F
+FBSD_1.0 isspecial F
+FBSD_1.0 isupper F
+FBSD_1.0 iswalnum F
+FBSD_1.0 iswalpha F
+FBSD_1.0 iswascii F
+FBSD_1.0 iswblank F
+FBSD_1.0 iswcntrl F
+FBSD_1.0 iswctype F
+FBSD_1.0 iswdigit F
+FBSD_1.0 iswgraph F
+FBSD_1.0 iswhexnumber F
+FBSD_1.0 iswideogram F
+FBSD_1.0 iswlower F
+FBSD_1.0 iswnumber F
+FBSD_1.0 iswphonogram F
+FBSD_1.0 iswprint F
+FBSD_1.0 iswpunct F
+FBSD_1.0 iswrune F
+FBSD_1.0 iswspace F
+FBSD_1.0 iswspecial F
+FBSD_1.0 iswupper F
+FBSD_1.0 iswxdigit F
+FBSD_1.0 isxdigit F
+FBSD_1.0 jail W F
+FBSD_1.0 jail_attach W F
+FBSD_1.0 jrand48 F
+FBSD_1.0 kenv W F
+FBSD_1.0 kevent W F
+FBSD_1.0 key_decryptsession F
+FBSD_1.0 key_decryptsession_pk F
+FBSD_1.0 key_encryptsession F
+FBSD_1.0 key_encryptsession_pk F
+FBSD_1.0 key_gendes F
+FBSD_1.0 key_get_conv F
+FBSD_1.0 key_secretkey_is_set F
+FBSD_1.0 key_setnet F
+FBSD_1.0 key_setsecret F
+FBSD_1.0 kill W F
+FBSD_1.0 killpg F
+FBSD_1.0 kldfind W F
+FBSD_1.0 kldfirstmod W F
+FBSD_1.0 kldload W F
+FBSD_1.0 kldnext W F
+FBSD_1.0 kldstat W F
+FBSD_1.0 kldsym W F
+FBSD_1.0 kldunload W F
+FBSD_1.0 kldunloadf W F
+FBSD_1.0 kmq_notify W F
+FBSD_1.0 kmq_open W F
+FBSD_1.0 kmq_setattr W F
+FBSD_1.0 kmq_timedreceive W F
+FBSD_1.0 kmq_timedsend W F
+FBSD_1.0 kmq_unlink W F
+FBSD_1.0 kqueue W F
+FBSD_1.0 ksem_close W F
+FBSD_1.0 ksem_destroy W F
+FBSD_1.0 ksem_getvalue W F
+FBSD_1.0 ksem_init W F
+FBSD_1.0 ksem_open W F
+FBSD_1.0 ksem_post W F
+FBSD_1.0 ksem_timedwait W F
+FBSD_1.0 ksem_trywait W F
+FBSD_1.0 ksem_unlink W F
+FBSD_1.0 ksem_wait W F
+FBSD_1.0 ktimer_create W F
+FBSD_1.0 ktimer_delete W F
+FBSD_1.0 ktimer_getoverrun W F
+FBSD_1.0 ktimer_gettime W F
+FBSD_1.0 ktimer_settime W F
+FBSD_1.0 ktrace W F
+FBSD_1.0 l64a F
+FBSD_1.0 l64a_r F
+FBSD_1.0 labs F
+FBSD_1.0 lchflags W F
+FBSD_1.0 lchmod W F
+FBSD_1.0 lchown W F
+FBSD_1.0 lcong48 F
+FBSD_1.0 ldexp F
+FBSD_1.0 ldiv F
+FBSD_1.0 lfind F
+FBSD_1.0 lgetfh W F
+FBSD_1.0 link W F
+FBSD_1.0 link_addr F
+FBSD_1.0 link_ntoa F
+FBSD_1.0 lio_listio W F
+FBSD_1.0 listen W F
+FBSD_1.0 llabs F
+FBSD_1.0 lldiv F
+FBSD_1.0 localeconv F
+FBSD_1.0 localtime F
+FBSD_1.0 localtime_r F
+FBSD_1.0 lockf F
+FBSD_1.0 longjmp F
+FBSD_1.0 longjmperror F
+FBSD_1.0 lrand48 F
+FBSD_1.0 lsearch F
+FBSD_1.0 lseek W F
+FBSD_1.0 lstat W F
+FBSD_1.0 lutimes W F
+FBSD_1.0 mac_execve F
+FBSD_1.0 mac_free F
+FBSD_1.0 mac_from_text F
+FBSD_1.0 mac_get_fd F
+FBSD_1.0 mac_get_file F
+FBSD_1.0 mac_get_link F
+FBSD_1.0 mac_get_peer F
+FBSD_1.0 mac_get_pid F
+FBSD_1.0 mac_get_proc F
+FBSD_1.0 mac_is_present F
+FBSD_1.0 mac_prepare F
+FBSD_1.0 mac_prepare_file_label F
+FBSD_1.0 mac_prepare_ifnet_label F
+FBSD_1.0 mac_prepare_packet_label F
+FBSD_1.0 mac_prepare_process_label F
+FBSD_1.0 mac_prepare_type F
+FBSD_1.0 mac_reload F
+FBSD_1.0 mac_set_fd F
+FBSD_1.0 mac_set_file F
+FBSD_1.0 mac_set_link F
+FBSD_1.0 mac_set_proc F
+FBSD_1.0 mac_syscall W F
+FBSD_1.0 mac_to_text F
+FBSD_1.0 madvise W F
+FBSD_1.0 makecontext W F
+FBSD_1.0 malloc W F
+FBSD_1.0 malloc_usable_size W F
+FBSD_1.0 mblen F
+FBSD_1.0 mbrlen F
+FBSD_1.0 mbrtowc F
+FBSD_1.0 mbsinit F
+FBSD_1.0 mbsnrtowcs F
+FBSD_1.0 mbsrtowcs F
+FBSD_1.0 mbstowcs F
+FBSD_1.0 mbtowc F
+FBSD_1.0 memccpy F
+FBSD_1.0 memchr F
+FBSD_1.0 memcmp F
+FBSD_1.0 memcpy F
+FBSD_1.0 memmem F
+FBSD_1.0 memmove F
+FBSD_1.0 memset F
+FBSD_1.0 mergesort F
+FBSD_1.0 mincore W F
+FBSD_1.0 minherit W F
+FBSD_1.0 mkdir W F
+FBSD_1.0 mkdtemp F
+FBSD_1.0 mkfifo W F
+FBSD_1.0 mknod W F
+FBSD_1.0 mkstemp F
+FBSD_1.0 mkstemps F
+FBSD_1.0 mktemp F
+FBSD_1.0 mktime F
+FBSD_1.0 mlock W F
+FBSD_1.0 mlockall W F
+FBSD_1.0 mmap W F
+FBSD_1.0 modf F
+FBSD_1.0 modfind W F
+FBSD_1.0 modfnext W F
+FBSD_1.0 modnext W F
+FBSD_1.0 modstat W F
+FBSD_1.0 moncontrol F
+FBSD_1.0 monstartup F
+FBSD_1.0 mount W F
+FBSD_1.0 mpool_close F
+FBSD_1.0 mpool_filter F
+FBSD_1.0 mpool_get F
+FBSD_1.0 mpool_open F
+FBSD_1.0 mpool_put F
+FBSD_1.0 mpool_sync F
+FBSD_1.0 mprotect W F
+FBSD_1.0 mrand48 F
+FBSD_1.0 msgget W F
+FBSD_1.0 msgrcv W F
+FBSD_1.0 msgsnd W F
+FBSD_1.0 msgsys W F
+FBSD_1.0 msync W F
+FBSD_1.0 munlock W F
+FBSD_1.0 munlockall W F
+FBSD_1.0 munmap W F
+FBSD_1.0 nanosleep W F
+FBSD_1.0 nc_perror F
+FBSD_1.0 nc_sperror F
+FBSD_1.0 netbsd_lchown F
+FBSD_1.0 netbsd_msync F
+FBSD_1.0 netname2host F
+FBSD_1.0 netname2user F
+FBSD_1.0 nextwctype F
+FBSD_1.0 nfssvc W F
+FBSD_1.0 nfstat W F
+FBSD_1.0 nftw F
+FBSD_1.0 nice F
+FBSD_1.0 nl_langinfo F
+FBSD_1.0 nlist F
+FBSD_1.0 nlstat W F
+FBSD_1.0 nmount W F
+FBSD_1.0 nrand48 F
+FBSD_1.0 nsdispatch W F
+FBSD_1.0 nstat W F
+FBSD_1.0 ntohl F
+FBSD_1.0 ntohs F
+FBSD_1.0 ntp_adjtime W F
+FBSD_1.0 ntp_gettime W F
+FBSD_1.0 offtime F
+FBSD_1.0 offtime_r F
+FBSD_1.0 open W F
+FBSD_1.0 opendir F
+FBSD_1.0 openlog F
+FBSD_1.0 optarg D 0x8
+FBSD_1.0 opterr D 0x4
+FBSD_1.0 optind D 0x4
+FBSD_1.0 optopt D 0x4
+FBSD_1.0 optreset D 0x4
+FBSD_1.0 p_fqnname W F
+FBSD_1.0 p_query W F
+FBSD_1.0 p_secstodate W F
+FBSD_1.0 pathconf W F
+FBSD_1.0 pause W F
+FBSD_1.0 pclose F
+FBSD_1.0 perror F
+FBSD_1.0 pipe W F
+FBSD_1.0 pmap_getmaps F
+FBSD_1.0 pmap_getport F
+FBSD_1.0 pmap_rmtcall F
+FBSD_1.0 pmap_set F
+FBSD_1.0 pmap_unset F
+FBSD_1.0 poll W F
+FBSD_1.0 popen F
+FBSD_1.0 posix2time F
+FBSD_1.0 posix_madvise F
+FBSD_1.0 posix_memalign W F
+FBSD_1.0 posix_openpt W F
+FBSD_1.0 pread W F
+FBSD_1.0 preadv W F
+FBSD_1.0 printf F
+FBSD_1.0 profil W F
+FBSD_1.0 pselect W F
+FBSD_1.0 psignal F
+FBSD_1.0 pthread_atfork W F
+FBSD_1.0 pthread_attr_destroy W F
+FBSD_1.0 pthread_attr_get_np W F
+FBSD_1.0 pthread_attr_getdetachstate W F
+FBSD_1.0 pthread_attr_getguardsize W F
+FBSD_1.0 pthread_attr_getinheritsched W F
+FBSD_1.0 pthread_attr_getschedparam W F
+FBSD_1.0 pthread_attr_getschedpolicy W F
+FBSD_1.0 pthread_attr_getscope W F
+FBSD_1.0 pthread_attr_getstackaddr W F
+FBSD_1.0 pthread_attr_getstacksize W F
+FBSD_1.0 pthread_attr_init W F
+FBSD_1.0 pthread_attr_setdetachstate W F
+FBSD_1.0 pthread_attr_setguardsize W F
+FBSD_1.0 pthread_attr_setinheritsched W F
+FBSD_1.0 pthread_attr_setschedparam W F
+FBSD_1.0 pthread_attr_setschedpolicy W F
+FBSD_1.0 pthread_attr_setscope W F
+FBSD_1.0 pthread_attr_setstackaddr W F
+FBSD_1.0 pthread_attr_setstacksize W F
+FBSD_1.0 pthread_cancel W F
+FBSD_1.0 pthread_cleanup_pop W F
+FBSD_1.0 pthread_cleanup_push W F
+FBSD_1.0 pthread_cond_broadcast W F
+FBSD_1.0 pthread_cond_destroy W F
+FBSD_1.0 pthread_cond_init W F
+FBSD_1.0 pthread_cond_signal W F
+FBSD_1.0 pthread_cond_timedwait W F
+FBSD_1.0 pthread_cond_wait W F
+FBSD_1.0 pthread_detach W F
+FBSD_1.0 pthread_equal W F
+FBSD_1.0 pthread_exit W F
+FBSD_1.0 pthread_getspecific W F
+FBSD_1.0 pthread_join W F
+FBSD_1.0 pthread_key_create W F
+FBSD_1.0 pthread_key_delete W F
+FBSD_1.0 pthread_kill W F
+FBSD_1.0 pthread_main_np W F
+FBSD_1.0 pthread_mutex_destroy W F
+FBSD_1.0 pthread_mutex_init W F
+FBSD_1.0 pthread_mutex_lock W F
+FBSD_1.0 pthread_mutex_trylock W F
+FBSD_1.0 pthread_mutex_unlock W F
+FBSD_1.0 pthread_mutexattr_destroy W F
+FBSD_1.0 pthread_mutexattr_init W F
+FBSD_1.0 pthread_mutexattr_settype W F
+FBSD_1.0 pthread_once W F
+FBSD_1.0 pthread_rwlock_destroy W F
+FBSD_1.0 pthread_rwlock_init W F
+FBSD_1.0 pthread_rwlock_rdlock W F
+FBSD_1.0 pthread_rwlock_tryrdlock W F
+FBSD_1.0 pthread_rwlock_trywrlock W F
+FBSD_1.0 pthread_rwlock_unlock W F
+FBSD_1.0 pthread_rwlock_wrlock W F
+FBSD_1.0 pthread_self W F
+FBSD_1.0 pthread_setcancelstate W F
+FBSD_1.0 pthread_setcanceltype W F
+FBSD_1.0 pthread_setspecific W F
+FBSD_1.0 pthread_sigmask W F
+FBSD_1.0 pthread_testcancel W F
+FBSD_1.0 ptrace W F
+FBSD_1.0 ptsname F
+FBSD_1.0 putc F
+FBSD_1.0 putc_unlocked F
+FBSD_1.0 putchar F
+FBSD_1.0 putchar_unlocked F
+FBSD_1.0 putenv F
+FBSD_1.0 puts F
+FBSD_1.0 putw F
+FBSD_1.0 putwc F
+FBSD_1.0 putwchar F
+FBSD_1.0 pwrite W F
+FBSD_1.0 pwritev W F
+FBSD_1.0 qsort F
+FBSD_1.0 qsort_r F
+FBSD_1.0 quotactl W F
+FBSD_1.0 radixsort F
+FBSD_1.0 raise W F
+FBSD_1.0 rand F
+FBSD_1.0 rand_r F
+FBSD_1.0 random F
+FBSD_1.0 rcmd F
+FBSD_1.0 rcmd_af F
+FBSD_1.0 rcmdsh F
+FBSD_1.0 read W F
+FBSD_1.0 readdir F
+FBSD_1.0 readdir_r F
+FBSD_1.0 readlink W F
+FBSD_1.0 readpassphrase F
+FBSD_1.0 readv W F
+FBSD_1.0 realloc W F
+FBSD_1.0 reallocf F
+FBSD_1.0 realpath F
+FBSD_1.0 reboot W F
+FBSD_1.0 recv F
+FBSD_1.0 recvfrom W F
+FBSD_1.0 recvmsg W F
+FBSD_1.0 regcomp F
+FBSD_1.0 regerror F
+FBSD_1.0 regexec F
+FBSD_1.0 regfree F
+FBSD_1.0 registerrpc F
+FBSD_1.0 remove F
+FBSD_1.0 remque F
+FBSD_1.0 rename W F
+FBSD_1.0 res_init W F
+FBSD_1.0 res_mkquery W F
+FBSD_1.0 res_query W F
+FBSD_1.0 res_querydomain W F
+FBSD_1.0 res_search W F
+FBSD_1.0 res_send W F
+FBSD_1.0 revoke W F
+FBSD_1.0 rewind F
+FBSD_1.0 rewinddir F
+FBSD_1.0 rfork W F
+FBSD_1.0 rindex W F
+FBSD_1.0 rmdir W F
+FBSD_1.0 rpc_broadcast F
+FBSD_1.0 rpc_broadcast_exp F
+FBSD_1.0 rpc_call F
+FBSD_1.0 rpc_control F
+FBSD_1.0 rpc_createerr D 0x10
+FBSD_1.0 rpc_nullproc F
+FBSD_1.0 rpc_reg F
+FBSD_1.0 rpcb_getaddr F
+FBSD_1.0 rpcb_getmaps F
+FBSD_1.0 rpcb_gettime F
+FBSD_1.0 rpcb_rmtcall F
+FBSD_1.0 rpcb_set F
+FBSD_1.0 rpcb_taddr2uaddr F
+FBSD_1.0 rpcb_uaddr2taddr F
+FBSD_1.0 rpcb_unset F
+FBSD_1.0 rpmatch F
+FBSD_1.0 rresvport F
+FBSD_1.0 rresvport_af F
+FBSD_1.0 rtime F
+FBSD_1.0 rtprio W F
+FBSD_1.0 rtprio_thread W F
+FBSD_1.0 ruserok F
+FBSD_1.0 scandir F
+FBSD_1.0 scanf F
+FBSD_1.0 sched_get_priority_max W F
+FBSD_1.0 sched_get_priority_min W F
+FBSD_1.0 sched_getparam W F
+FBSD_1.0 sched_getscheduler W F
+FBSD_1.0 sched_rr_get_interval W F
+FBSD_1.0 sched_setparam W F
+FBSD_1.0 sched_setscheduler W F
+FBSD_1.0 sched_yield W F
+FBSD_1.0 sctp_bindx F
+FBSD_1.0 sctp_connectx F
+FBSD_1.0 sctp_freeladdrs F
+FBSD_1.0 sctp_freepaddrs F
+FBSD_1.0 sctp_getaddrlen F
+FBSD_1.0 sctp_getassocid F
+FBSD_1.0 sctp_getladdrs F
+FBSD_1.0 sctp_getpaddrs F
+FBSD_1.0 sctp_opt_info F
+FBSD_1.0 sctp_peeloff F
+FBSD_1.0 sctp_recvmsg F
+FBSD_1.0 sctp_send F
+FBSD_1.0 sctp_sendmsg F
+FBSD_1.0 sctp_sendmsgx F
+FBSD_1.0 sctp_sendx F
+FBSD_1.0 seed48 F
+FBSD_1.0 seekdir F
+FBSD_1.0 select W F
+FBSD_1.0 sem_close W F
+FBSD_1.0 sem_destroy W F
+FBSD_1.0 sem_getvalue W F
+FBSD_1.0 sem_init W F
+FBSD_1.0 sem_open W F
+FBSD_1.0 sem_post W F
+FBSD_1.0 sem_timedwait W F
+FBSD_1.0 sem_trywait W F
+FBSD_1.0 sem_unlink W F
+FBSD_1.0 sem_wait W F
+FBSD_1.0 semget W F
+FBSD_1.0 semop W F
+FBSD_1.0 semsys W F
+FBSD_1.0 send F
+FBSD_1.0 sendfile W F
+FBSD_1.0 sendmsg W F
+FBSD_1.0 sendto W F
+FBSD_1.0 setaudit W F
+FBSD_1.0 setaudit_addr W F
+FBSD_1.0 setauid W F
+FBSD_1.0 setbuf F
+FBSD_1.0 setbuffer F
+FBSD_1.0 setcontext W F
+FBSD_1.0 setdomainname F
+FBSD_1.0 setegid W F
+FBSD_1.0 setenv F
+FBSD_1.0 seteuid W F
+FBSD_1.0 setfsent F
+FBSD_1.0 setfstab F
+FBSD_1.0 setgid W F
+FBSD_1.0 setgrent F
+FBSD_1.0 setgroupent F
+FBSD_1.0 setgroups W F
+FBSD_1.0 sethostent F
+FBSD_1.0 sethostid F
+FBSD_1.0 sethostname F
+FBSD_1.0 setipv4sourcefilter F
+FBSD_1.0 setitimer W F
+FBSD_1.0 setjmp F
+FBSD_1.0 setkey F
+FBSD_1.0 setlinebuf F
+FBSD_1.0 setlocale F
+FBSD_1.0 setlogin W F
+FBSD_1.0 setlogmask F
+FBSD_1.0 setmode F
+FBSD_1.0 setnetconfig F
+FBSD_1.0 setnetent F
+FBSD_1.0 setnetgrent F
+FBSD_1.0 setnetpath F
+FBSD_1.0 setpassent F
+FBSD_1.0 setpgid W F
+FBSD_1.0 setpgrp F
+FBSD_1.0 setpriority W F
+FBSD_1.0 setproctitle F
+FBSD_1.0 setprogname F
+FBSD_1.0 setprotoent F
+FBSD_1.0 setpwent F
+FBSD_1.0 setregid W F
+FBSD_1.0 setresgid W F
+FBSD_1.0 setresuid W F
+FBSD_1.0 setreuid W F
+FBSD_1.0 setrgid F
+FBSD_1.0 setrlimit W F
+FBSD_1.0 setrpcent F
+FBSD_1.0 setruid F
+FBSD_1.0 setservent F
+FBSD_1.0 setsid W F
+FBSD_1.0 setsockopt W F
+FBSD_1.0 setsourcefilter F
+FBSD_1.0 setstate F
+FBSD_1.0 settimeofday W F
+FBSD_1.0 setttyent F
+FBSD_1.0 setuid W F
+FBSD_1.0 setusershell F
+FBSD_1.0 setvbuf F
+FBSD_1.0 shm_open F
+FBSD_1.0 shm_unlink W F
+FBSD_1.0 shmat W F
+FBSD_1.0 shmdt W F
+FBSD_1.0 shmget W F
+FBSD_1.0 shmsys W F
+FBSD_1.0 shutdown W F
+FBSD_1.0 sigaction W F
+FBSD_1.0 sigaddset F
+FBSD_1.0 sigaltstack W F
+FBSD_1.0 sigblock F
+FBSD_1.0 sigdelset F
+FBSD_1.0 sigemptyset F
+FBSD_1.0 sigfillset F
+FBSD_1.0 siginterrupt F
+FBSD_1.0 sigismember F
+FBSD_1.0 siglongjmp F
+FBSD_1.0 signal F
+FBSD_1.0 sigpause F
+FBSD_1.0 sigpending W F
+FBSD_1.0 sigprocmask W F
+FBSD_1.0 sigqueue W F
+FBSD_1.0 sigreturn W F
+FBSD_1.0 sigsetjmp F
+FBSD_1.0 sigsetmask F
+FBSD_1.0 sigsuspend W F
+FBSD_1.0 sigtimedwait W F
+FBSD_1.0 sigvec F
+FBSD_1.0 sigwait W F
+FBSD_1.0 sigwaitinfo W F
+FBSD_1.0 sl_add F
+FBSD_1.0 sl_find F
+FBSD_1.0 sl_free F
+FBSD_1.0 sl_init F
+FBSD_1.0 sleep W F
+FBSD_1.0 snprintf F
+FBSD_1.0 sockatmark F
+FBSD_1.0 socket W F
+FBSD_1.0 socketpair W F
+FBSD_1.0 sprintf F
+FBSD_1.0 sradixsort F
+FBSD_1.0 srand F
+FBSD_1.0 srand48 F
+FBSD_1.0 sranddev F
+FBSD_1.0 srandom F
+FBSD_1.0 srandomdev F
+FBSD_1.0 sscanf F
+FBSD_1.0 stat W F
+FBSD_1.0 statfs W F
+FBSD_1.0 statvfs F
+FBSD_1.0 stpcpy F
+FBSD_1.0 strcasecmp F
+FBSD_1.0 strcasestr F
+FBSD_1.0 strcat F
+FBSD_1.0 strchr F
+FBSD_1.0 strcmp F
+FBSD_1.0 strcoll F
+FBSD_1.0 strcpy F
+FBSD_1.0 strcspn F
+FBSD_1.0 strdup F
+FBSD_1.0 strerror F
+FBSD_1.0 strerror_r F
+FBSD_1.0 strfmon F
+FBSD_1.0 strftime F
+FBSD_1.0 strlcat F
+FBSD_1.0 strlcpy F
+FBSD_1.0 strlen F
+FBSD_1.0 strmode F
+FBSD_1.0 strncasecmp F
+FBSD_1.0 strncat F
+FBSD_1.0 strncmp F
+FBSD_1.0 strncpy F
+FBSD_1.0 strnstr F
+FBSD_1.0 strpbrk F
+FBSD_1.0 strptime F
+FBSD_1.0 strrchr F
+FBSD_1.0 strsep F
+FBSD_1.0 strsignal F
+FBSD_1.0 strspn F
+FBSD_1.0 strstr F
+FBSD_1.0 strtod F
+FBSD_1.0 strtof F
+FBSD_1.0 strtofflags F
+FBSD_1.0 strtoimax F
+FBSD_1.0 strtok F
+FBSD_1.0 strtok_r W F
+FBSD_1.0 strtol F
+FBSD_1.0 strtold F
+FBSD_1.0 strtoll F
+FBSD_1.0 strtonum F
+FBSD_1.0 strtoq F
+FBSD_1.0 strtoul F
+FBSD_1.0 strtoull F
+FBSD_1.0 strtoumax F
+FBSD_1.0 strtouq F
+FBSD_1.0 strunvis F
+FBSD_1.0 strunvisx F
+FBSD_1.0 strvis F
+FBSD_1.0 strvisx F
+FBSD_1.0 strxfrm F
+FBSD_1.0 suboptarg D 0x8
+FBSD_1.0 svc_auth_reg F
+FBSD_1.0 svc_create F
+FBSD_1.0 svc_dg_create F
+FBSD_1.0 svc_dg_enablecache F
+FBSD_1.0 svc_exit F
+FBSD_1.0 svc_fd_create F
+FBSD_1.0 svc_fdset D 0x80
+FBSD_1.0 svc_getreq F
+FBSD_1.0 svc_getreq_common F
+FBSD_1.0 svc_getreq_poll F
+FBSD_1.0 svc_getreqset F
+FBSD_1.0 svc_maxfd D 0x4
+FBSD_1.0 svc_raw_create F
+FBSD_1.0 svc_reg F
+FBSD_1.0 svc_register F
+FBSD_1.0 svc_run F
+FBSD_1.0 svc_sendreply F
+FBSD_1.0 svc_tli_create F
+FBSD_1.0 svc_tp_create F
+FBSD_1.0 svc_unreg F
+FBSD_1.0 svc_unregister F
+FBSD_1.0 svc_vc_create F
+FBSD_1.0 svcerr_auth F
+FBSD_1.0 svcerr_decode F
+FBSD_1.0 svcerr_noproc F
+FBSD_1.0 svcerr_noprog F
+FBSD_1.0 svcerr_progvers F
+FBSD_1.0 svcerr_systemerr F
+FBSD_1.0 svcerr_weakauth F
+FBSD_1.0 svcfd_create F
+FBSD_1.0 svcraw_create F
+FBSD_1.0 svctcp_create F
+FBSD_1.0 svcudp_bufcreate F
+FBSD_1.0 svcudp_create F
+FBSD_1.0 svcunix_create F
+FBSD_1.0 svcunixfd_create F
+FBSD_1.0 swab F
+FBSD_1.0 swapcontext W F
+FBSD_1.0 swapoff W F
+FBSD_1.0 swapon W F
+FBSD_1.0 swprintf F
+FBSD_1.0 swscanf F
+FBSD_1.0 sym_ntop W F
+FBSD_1.0 sym_ntos W F
+FBSD_1.0 sym_ston W F
+FBSD_1.0 symlink W F
+FBSD_1.0 sync W F
+FBSD_1.0 sys_errlist D 0x4B8
+FBSD_1.0 sys_nerr D 0x4
+FBSD_1.0 sys_nsig D 0x4
+FBSD_1.0 sys_siglist D 0x100
+FBSD_1.0 sys_signame D 0x100
+FBSD_1.0 sysarch W F
+FBSD_1.0 syscall W F
+FBSD_1.0 sysconf F
+FBSD_1.0 sysctl F
+FBSD_1.0 sysctlbyname F
+FBSD_1.0 sysctlnametomib F
+FBSD_1.0 syslog F
+FBSD_1.0 system W F
+FBSD_1.0 taddr2uaddr F
+FBSD_1.0 tcdrain W F
+FBSD_1.0 tcflow F
+FBSD_1.0 tcflush F
+FBSD_1.0 tcgetattr F
+FBSD_1.0 tcgetpgrp F
+FBSD_1.0 tcsendbreak F
+FBSD_1.0 tcsetattr F
+FBSD_1.0 tcsetpgrp F
+FBSD_1.0 tdelete F
+FBSD_1.0 telldir F
+FBSD_1.0 tempnam F
+FBSD_1.0 tfind F
+FBSD_1.0 thr_create W F
+FBSD_1.0 thr_exit W F
+FBSD_1.0 thr_kill W F
+FBSD_1.0 thr_kill2 W F
+FBSD_1.0 thr_new W F
+FBSD_1.0 thr_self W F
+FBSD_1.0 thr_set_name W F
+FBSD_1.0 thr_suspend W F
+FBSD_1.0 thr_wake W F
+FBSD_1.0 time F
+FBSD_1.0 time2posix F
+FBSD_1.0 timegm F
+FBSD_1.0 timelocal F
+FBSD_1.0 timeoff F
+FBSD_1.0 times F
+FBSD_1.0 timezone F
+FBSD_1.0 tmpfile F
+FBSD_1.0 tmpnam F
+FBSD_1.0 toascii F
+FBSD_1.0 tolower F
+FBSD_1.0 toupper F
+FBSD_1.0 towctrans F
+FBSD_1.0 towlower F
+FBSD_1.0 towupper F
+FBSD_1.0 truncate W F
+FBSD_1.0 tsearch F
+FBSD_1.0 ttyname F
+FBSD_1.0 ttyname_r F
+FBSD_1.0 ttyslot F
+FBSD_1.0 twalk F
+FBSD_1.0 tzname D 0x10
+FBSD_1.0 tzset F
+FBSD_1.0 tzsetwall F
+FBSD_1.0 uaddr2taddr F
+FBSD_1.0 ualarm F
+FBSD_1.0 ulimit F
+FBSD_1.0 umask W F
+FBSD_1.0 uname F
+FBSD_1.0 undelete W F
+FBSD_1.0 ungetc F
+FBSD_1.0 ungetwc F
+FBSD_1.0 unlink W F
+FBSD_1.0 unlockpt F
+FBSD_1.0 unmount W F
+FBSD_1.0 unsetenv F
+FBSD_1.0 user2netname F
+FBSD_1.0 user_from_uid F
+FBSD_1.0 usleep W F
+FBSD_1.0 utime F
+FBSD_1.0 utimes W F
+FBSD_1.0 utrace W F
+FBSD_1.0 uuid_compare F
+FBSD_1.0 uuid_create F
+FBSD_1.0 uuid_create_nil F
+FBSD_1.0 uuid_equal F
+FBSD_1.0 uuid_from_string F
+FBSD_1.0 uuid_hash F
+FBSD_1.0 uuid_is_nil F
+FBSD_1.0 uuid_to_string F
+FBSD_1.0 uuidgen W F
+FBSD_1.0 vadvise F
+FBSD_1.0 valloc F
+FBSD_1.0 vasprintf F
+FBSD_1.0 verr F
+FBSD_1.0 verrc F
+FBSD_1.0 verrx F
+FBSD_1.0 vfork W F
+FBSD_1.0 vfprintf F
+FBSD_1.0 vfscanf W F
+FBSD_1.0 vfwprintf F
+FBSD_1.0 vfwscanf F
+FBSD_1.0 vis F
+FBSD_1.0 vprintf F
+FBSD_1.0 vscanf F
+FBSD_1.0 vsnprintf F
+FBSD_1.0 vsprintf F
+FBSD_1.0 vsscanf F
+FBSD_1.0 vswprintf F
+FBSD_1.0 vswscanf F
+FBSD_1.0 vsyslog F
+FBSD_1.0 vwarn F
+FBSD_1.0 vwarnc F
+FBSD_1.0 vwarnx F
+FBSD_1.0 vwprintf F
+FBSD_1.0 vwscanf F
+FBSD_1.0 wait W F
+FBSD_1.0 wait3 W F
+FBSD_1.0 wait4 W F
+FBSD_1.0 waitpid W F
+FBSD_1.0 warn W F
+FBSD_1.0 warnc F
+FBSD_1.0 warnx F
+FBSD_1.0 wcrtomb F
+FBSD_1.0 wcscat F
+FBSD_1.0 wcschr F
+FBSD_1.0 wcscmp F
+FBSD_1.0 wcscoll F
+FBSD_1.0 wcscpy F
+FBSD_1.0 wcscspn F
+FBSD_1.0 wcsdup F
+FBSD_1.0 wcsftime F
+FBSD_1.0 wcslcat F
+FBSD_1.0 wcslcpy F
+FBSD_1.0 wcslen F
+FBSD_1.0 wcsncat F
+FBSD_1.0 wcsncmp F
+FBSD_1.0 wcsncpy F
+FBSD_1.0 wcsnrtombs F
+FBSD_1.0 wcspbrk F
+FBSD_1.0 wcsrchr F
+FBSD_1.0 wcsrtombs F
+FBSD_1.0 wcsspn F
+FBSD_1.0 wcsstr F
+FBSD_1.0 wcstod F
+FBSD_1.0 wcstof F
+FBSD_1.0 wcstoimax F
+FBSD_1.0 wcstok F
+FBSD_1.0 wcstol F
+FBSD_1.0 wcstold F
+FBSD_1.0 wcstoll F
+FBSD_1.0 wcstombs F
+FBSD_1.0 wcstoul F
+FBSD_1.0 wcstoull F
+FBSD_1.0 wcstoumax F
+FBSD_1.0 wcswidth F
+FBSD_1.0 wcsxfrm F
+FBSD_1.0 wctob F
+FBSD_1.0 wctomb F
+FBSD_1.0 wctrans F
+FBSD_1.0 wctype F
+FBSD_1.0 wcwidth F
+FBSD_1.0 wmemchr F
+FBSD_1.0 wmemcmp F
+FBSD_1.0 wmemcpy F
+FBSD_1.0 wmemmove F
+FBSD_1.0 wmemset F
+FBSD_1.0 wordexp F
+FBSD_1.0 wordfree F
+FBSD_1.0 wprintf F
+FBSD_1.0 write W F
+FBSD_1.0 writev W F
+FBSD_1.0 wscanf F
+FBSD_1.0 xdr_accepted_reply F
+FBSD_1.0 xdr_array F
+FBSD_1.0 xdr_authdes_cred F
+FBSD_1.0 xdr_authdes_verf F
+FBSD_1.0 xdr_authunix_parms F
+FBSD_1.0 xdr_bool F
+FBSD_1.0 xdr_bytes F
+FBSD_1.0 xdr_callhdr F
+FBSD_1.0 xdr_callmsg F
+FBSD_1.0 xdr_char F
+FBSD_1.0 xdr_cryptkeyarg F
+FBSD_1.0 xdr_cryptkeyarg2 F
+FBSD_1.0 xdr_cryptkeyres F
+FBSD_1.0 xdr_datum F
+FBSD_1.0 xdr_des_block F
+FBSD_1.0 xdr_des_dir F
+FBSD_1.0 xdr_des_mode F
+FBSD_1.0 xdr_desargs F
+FBSD_1.0 xdr_desresp F
+FBSD_1.0 xdr_domainname F
+FBSD_1.0 xdr_double F
+FBSD_1.0 xdr_enum F
+FBSD_1.0 xdr_float F
+FBSD_1.0 xdr_free F
+FBSD_1.0 xdr_getcredres F
+FBSD_1.0 xdr_hyper F
+FBSD_1.0 xdr_int F
+FBSD_1.0 xdr_int16_t F
+FBSD_1.0 xdr_int32_t F
+FBSD_1.0 xdr_int64_t F
+FBSD_1.0 xdr_key_netstarg F
+FBSD_1.0 xdr_key_netstres F
+FBSD_1.0 xdr_keybuf F
+FBSD_1.0 xdr_keydat F
+FBSD_1.0 xdr_keystatus F
+FBSD_1.0 xdr_long F
+FBSD_1.0 xdr_longlong_t F
+FBSD_1.0 xdr_mapname F
+FBSD_1.0 xdr_netbuf F
+FBSD_1.0 xdr_netnamestr F
+FBSD_1.0 xdr_netobj F
+FBSD_1.0 xdr_opaque F
+FBSD_1.0 xdr_opaque_auth F
+FBSD_1.0 xdr_peername F
+FBSD_1.0 xdr_pmap F
+FBSD_1.0 xdr_pmaplist F
+FBSD_1.0 xdr_pmaplist_ptr F
+FBSD_1.0 xdr_pointer F
+FBSD_1.0 xdr_reference F
+FBSD_1.0 xdr_rejected_reply F
+FBSD_1.0 xdr_replymsg F
+FBSD_1.0 xdr_rmtcall_args F
+FBSD_1.0 xdr_rmtcallres F
+FBSD_1.0 xdr_rpcb F
+FBSD_1.0 xdr_rpcb_entry F
+FBSD_1.0 xdr_rpcb_entry_list_ptr F
+FBSD_1.0 xdr_rpcb_rmtcallargs F
+FBSD_1.0 xdr_rpcb_rmtcallres F
+FBSD_1.0 xdr_rpcb_stat F
+FBSD_1.0 xdr_rpcb_stat_byvers F
+FBSD_1.0 xdr_rpcblist F
+FBSD_1.0 xdr_rpcblist_ptr F
+FBSD_1.0 xdr_rpcbs_addrlist F
+FBSD_1.0 xdr_rpcbs_addrlist_ptr F
+FBSD_1.0 xdr_rpcbs_proc F
+FBSD_1.0 xdr_rpcbs_rmtcalllist F
+FBSD_1.0 xdr_rpcbs_rmtcalllist_ptr F
+FBSD_1.0 xdr_short F
+FBSD_1.0 xdr_string F
+FBSD_1.0 xdr_u_char F
+FBSD_1.0 xdr_u_hyper F
+FBSD_1.0 xdr_u_int F
+FBSD_1.0 xdr_u_int16_t F
+FBSD_1.0 xdr_u_int32_t F
+FBSD_1.0 xdr_u_int64_t F
+FBSD_1.0 xdr_u_long F
+FBSD_1.0 xdr_u_longlong_t F
+FBSD_1.0 xdr_u_short F
+FBSD_1.0 xdr_union F
+FBSD_1.0 xdr_unixcred F
+FBSD_1.0 xdr_valdat F
+FBSD_1.0 xdr_vector F
+FBSD_1.0 xdr_void F
+FBSD_1.0 xdr_wrapstring F
+FBSD_1.0 xdr_ypbind_binding F
+FBSD_1.0 xdr_ypbind_resp F
+FBSD_1.0 xdr_ypbind_resptype F
+FBSD_1.0 xdr_ypbind_setdom F
+FBSD_1.0 xdr_ypmap_parms F
+FBSD_1.0 xdr_ypmaplist F
+FBSD_1.0 xdr_yppush_status F
+FBSD_1.0 xdr_yppushresp_xfr F
+FBSD_1.0 xdr_ypreq_key F
+FBSD_1.0 xdr_ypreq_nokey F
+FBSD_1.0 xdr_ypreq_xfr F
+FBSD_1.0 xdr_ypreqtype F
+FBSD_1.0 xdr_yprequest F
+FBSD_1.0 xdr_ypresp_all F
+FBSD_1.0 xdr_ypresp_all_seq F
+FBSD_1.0 xdr_ypresp_key_val F
+FBSD_1.0 xdr_ypresp_maplist F
+FBSD_1.0 xdr_ypresp_master F
+FBSD_1.0 xdr_ypresp_order F
+FBSD_1.0 xdr_ypresp_val F
+FBSD_1.0 xdr_ypresp_xfr F
+FBSD_1.0 xdr_ypresponse F
+FBSD_1.0 xdr_ypresptype F
+FBSD_1.0 xdr_ypstat F
+FBSD_1.0 xdr_ypxfrstat F
+FBSD_1.0 xdrmem_create F
+FBSD_1.0 xdrrec_create F
+FBSD_1.0 xdrrec_endofrecord F
+FBSD_1.0 xdrrec_eof F
+FBSD_1.0 xdrrec_skiprecord F
+FBSD_1.0 xdrstdio_create F
+FBSD_1.0 xprt_register F
+FBSD_1.0 xprt_unregister F
+FBSD_1.0 yp_all F
+FBSD_1.0 yp_bind F
+FBSD_1.0 yp_first F
+FBSD_1.0 yp_get_default_domain F
+FBSD_1.0 yp_maplist F
+FBSD_1.0 yp_master F
+FBSD_1.0 yp_match F
+FBSD_1.0 yp_next F
+FBSD_1.0 yp_order F
+FBSD_1.0 yp_unbind F
+FBSD_1.0 ypbinderr_string F
+FBSD_1.0 yperr_string F
+FBSD_1.0 ypprot_err F
+FBSD_1.0 ypresp_allfn D 0x8
+FBSD_1.0 ypresp_data D 0x8
+FBSD_1.1 __pthread_cleanup_pop_imp W F
+FBSD_1.1 __pthread_cleanup_push_imp W F
+FBSD_1.1 __semctl W F
+FBSD_1.1 acl_add_flag_np F
+FBSD_1.1 acl_add_perm F
+FBSD_1.1 acl_clear_flags_np F
+FBSD_1.1 acl_create_entry_np F
+FBSD_1.1 acl_delete_entry_np F
+FBSD_1.1 acl_delete_flag_np F
+FBSD_1.1 acl_delete_perm F
+FBSD_1.1 acl_get_brand_np F
+FBSD_1.1 acl_get_entry_type_np F
+FBSD_1.1 acl_get_flag_np F
+FBSD_1.1 acl_get_flagset_np F
+FBSD_1.1 acl_get_perm_np F
+FBSD_1.1 acl_is_trivial_np F
+FBSD_1.1 acl_set_entry_type_np F
+FBSD_1.1 acl_set_flagset_np F
+FBSD_1.1 acl_strip_np F
+FBSD_1.1 acl_to_text_np F
+FBSD_1.1 arc4random_buf F
+FBSD_1.1 arc4random_uniform F
+FBSD_1.1 closefrom F
+FBSD_1.1 cpuset W F
+FBSD_1.1 cpuset_getaffinity W F
+FBSD_1.1 cpuset_getid W F
+FBSD_1.1 cpuset_setaffinity W F
+FBSD_1.1 cpuset_setid W F
+FBSD_1.1 dprintf F
+FBSD_1.1 faccessat W F
+FBSD_1.1 fchmodat W F
+FBSD_1.1 fchownat W F
+FBSD_1.1 fdevname F
+FBSD_1.1 fdevname_r F
+FBSD_1.1 fdopendir F
+FBSD_1.1 feature_present F
+FBSD_1.1 fexecve W F
+FBSD_1.1 ffsll F
+FBSD_1.1 flsll F
+FBSD_1.1 fstatat W F
+FBSD_1.1 fts_children F
+FBSD_1.1 fts_close F
+FBSD_1.1 fts_get_clientptr F
+FBSD_1.1 fts_get_stream F
+FBSD_1.1 fts_open F
+FBSD_1.1 fts_read F
+FBSD_1.1 fts_set F
+FBSD_1.1 fts_set_clientptr F
+FBSD_1.1 futimesat W F
+FBSD_1.1 getdelim F
+FBSD_1.1 getline F
+FBSD_1.1 jail_get W F
+FBSD_1.1 jail_remove W F
+FBSD_1.1 jail_set W F
+FBSD_1.1 linkat W F
+FBSD_1.1 lpathconf W F
+FBSD_1.1 memrchr F
+FBSD_1.1 mkdirat W F
+FBSD_1.1 mkfifoat W F
+FBSD_1.1 mknodat W F
+FBSD_1.1 mpool_delete F
+FBSD_1.1 mpool_new F
+FBSD_1.1 msgctl W F
+FBSD_1.1 openat W F
+FBSD_1.1 posix_spawn F
+FBSD_1.1 posix_spawn_file_actions_addclose F
+FBSD_1.1 posix_spawn_file_actions_adddup2 F
+FBSD_1.1 posix_spawn_file_actions_addopen F
+FBSD_1.1 posix_spawn_file_actions_destroy F
+FBSD_1.1 posix_spawn_file_actions_init F
+FBSD_1.1 posix_spawnattr_destroy F
+FBSD_1.1 posix_spawnattr_getflags F
+FBSD_1.1 posix_spawnattr_getpgroup F
+FBSD_1.1 posix_spawnattr_getschedparam F
+FBSD_1.1 posix_spawnattr_getschedpolicy F
+FBSD_1.1 posix_spawnattr_getsigdefault F
+FBSD_1.1 posix_spawnattr_getsigmask F
+FBSD_1.1 posix_spawnattr_init F
+FBSD_1.1 posix_spawnattr_setflags F
+FBSD_1.1 posix_spawnattr_setpgroup F
+FBSD_1.1 posix_spawnattr_setschedparam F
+FBSD_1.1 posix_spawnattr_setschedpolicy F
+FBSD_1.1 posix_spawnattr_setsigdefault F
+FBSD_1.1 posix_spawnattr_setsigmask F
+FBSD_1.1 posix_spawnp F
+FBSD_1.1 readlinkat W F
+FBSD_1.1 renameat W F
+FBSD_1.1 semctl F
+FBSD_1.1 setfib W F
+FBSD_1.1 shmctl W F
+FBSD_1.1 stpncpy F
+FBSD_1.1 strndup F
+FBSD_1.1 strnlen F
+FBSD_1.1 symlinkat W F
+FBSD_1.1 tcgetsid F
+FBSD_1.1 tcsetsid F
+FBSD_1.1 unlinkat W F
+FBSD_1.1 uuid_dec_be F
+FBSD_1.1 uuid_dec_le F
+FBSD_1.1 uuid_enc_be F
+FBSD_1.1 uuid_enc_le F
+FBSD_1.1 vdprintf F
+FBSD_1.1 wcpcpy F
+FBSD_1.1 wcpncpy F
+FBSD_1.1 wcscasecmp F
+FBSD_1.1 wcsncasecmp F
+FBSD_1.1 wcsnlen F
+FBSD_1.1 xdr_uint16_t F
+FBSD_1.1 xdr_uint32_t F
+FBSD_1.1 xdr_uint64_t F
+FBSD_1.2 __iconv F
+FBSD_1.2 __iconv_free_list F
+FBSD_1.2 __iconv_get_list F
+FBSD_1.2 basename_r F
+FBSD_1.2 cap_enter W F
+FBSD_1.2 cap_getmode W F
+FBSD_1.2 cfmakesane F
+FBSD_1.2 endutxent F
+FBSD_1.2 getloginclass W F
+FBSD_1.2 getpagesizes F
+FBSD_1.2 getutxent F
+FBSD_1.2 getutxid F
+FBSD_1.2 getutxline F
+FBSD_1.2 getutxuser F
+FBSD_1.2 iconv_canonicalize F
+FBSD_1.2 openat W F
+FBSD_1.2 pdfork W F
+FBSD_1.2 pdgetpid W F
+FBSD_1.2 pdkill W F
+FBSD_1.2 posix_fallocate W F
+FBSD_1.2 pthread_getthreadid_np W F
+FBSD_1.2 pututxline F
+FBSD_1.2 rctl_add_rule W F
+FBSD_1.2 rctl_get_limits W F
+FBSD_1.2 rctl_get_racct W F
+FBSD_1.2 rctl_get_rules W F
+FBSD_1.2 rctl_remove_rule W F
+FBSD_1.2 sem_close W F
+FBSD_1.2 sem_destroy W F
+FBSD_1.2 sem_getvalue W F
+FBSD_1.2 sem_init W F
+FBSD_1.2 sem_open W F
+FBSD_1.2 sem_post W F
+FBSD_1.2 sem_timedwait W F
+FBSD_1.2 sem_trywait W F
+FBSD_1.2 sem_unlink W F
+FBSD_1.2 sem_wait W F
+FBSD_1.2 setcontext W F
+FBSD_1.2 setloginclass W F
+FBSD_1.2 setutxdb F
+FBSD_1.2 setutxent F
+FBSD_1.2 sighold F
+FBSD_1.2 sigignore F
+FBSD_1.2 sigrelse F
+FBSD_1.2 sigset F
+FBSD_1.2 swapcontext W F
+FBSD_1.2 xdr_sizeof F
+FBSD_1.2 xsi_sigpause F
+FBSD_1.3 _ThreadRuneLocale T 0x8
+FBSD_1.3 __FreeBSD_libc_enter_restricted_mode F
+FBSD_1.3 ___mb_cur_max F
+FBSD_1.3 ___mb_cur_max_l F
+FBSD_1.3 ___runetype_l F
+FBSD_1.3 ___tolower_l F
+FBSD_1.3 ___toupper_l F
+FBSD_1.3 __allocm F
+FBSD_1.3 __bsd___iconv F
+FBSD_1.3 __bsd___iconv_free_list F
+FBSD_1.3 __bsd___iconv_get_list F
+FBSD_1.3 __bsd_iconv F
+FBSD_1.3 __bsd_iconv_canonicalize F
+FBSD_1.3 __bsd_iconv_close F
+FBSD_1.3 __bsd_iconv_open F
+FBSD_1.3 __bsd_iconv_open_into F
+FBSD_1.3 __bsd_iconv_set_relocation_prefix F
+FBSD_1.3 __bsd_iconvctl F
+FBSD_1.3 __bsd_iconvlist F
+FBSD_1.3 __calloc F
+FBSD_1.3 __cap_rights_clear F
+FBSD_1.3 __cap_rights_get W F
+FBSD_1.3 __cap_rights_init F
+FBSD_1.3 __cap_rights_is_set F
+FBSD_1.3 __cap_rights_set F
+FBSD_1.3 __dallocm F
+FBSD_1.3 __dallocx F
+FBSD_1.3 __free F
+FBSD_1.3 __getCurrentRuneLocale F
+FBSD_1.3 __istype_l F
+FBSD_1.3 __malloc F
+FBSD_1.3 __malloc_usable_size F
+FBSD_1.3 __mallocx F
+FBSD_1.3 __maskrune_l F
+FBSD_1.3 __nallocm F
+FBSD_1.3 __nallocx F
+FBSD_1.3 __posix_memalign F
+FBSD_1.3 __rallocm F
+FBSD_1.3 __rallocx F
+FBSD_1.3 __realloc F
+FBSD_1.3 __runes_for_locale F
+FBSD_1.3 __sallocm F
+FBSD_1.3 __sallocx F
+FBSD_1.3 __sbistype_l F
+FBSD_1.3 __sbmaskrune_l F
+FBSD_1.3 __xallocx F
+FBSD_1.3 _iconv_version D 0x4
+FBSD_1.3 accept4 W F
+FBSD_1.3 aio_mlock W F
+FBSD_1.3 aligned_alloc W F
+FBSD_1.3 allocm W F
+FBSD_1.3 asprintf_l F
+FBSD_1.3 at_quick_exit F
+FBSD_1.3 atof_l F
+FBSD_1.3 atoi_l F
+FBSD_1.3 atol_l F
+FBSD_1.3 atoll_l F
+FBSD_1.3 bindat W F
+FBSD_1.3 btowc_l F
+FBSD_1.3 c16rtomb F
+FBSD_1.3 c16rtomb_l F
+FBSD_1.3 c32rtomb F
+FBSD_1.3 c32rtomb_l F
+FBSD_1.3 cap_fcntls_get W F
+FBSD_1.3 cap_fcntls_limit W F
+FBSD_1.3 cap_ioctls_get W F
+FBSD_1.3 cap_ioctls_limit W F
+FBSD_1.3 cap_rights_contains F
+FBSD_1.3 cap_rights_is_valid F
+FBSD_1.3 cap_rights_limit W F
+FBSD_1.3 cap_rights_merge F
+FBSD_1.3 cap_rights_remove F
+FBSD_1.3 cap_sandboxed F
+FBSD_1.3 chflagsat W F
+FBSD_1.3 clock_getcpuclockid F
+FBSD_1.3 clock_getcpuclockid2 W F
+FBSD_1.3 connectat W F
+FBSD_1.3 dallocm W F
+FBSD_1.3 dallocx W F
+FBSD_1.3 digittoint_l F
+FBSD_1.3 dirfd F
+FBSD_1.3 dup3 W F
+FBSD_1.3 duplocale F
+FBSD_1.3 fdclosedir F
+FBSD_1.3 fdlopen W F
+FBSD_1.3 ffclock_getcounter W F
+FBSD_1.3 ffclock_getestimate W F
+FBSD_1.3 ffclock_setestimate W F
+FBSD_1.3 fgetwc_l F
+FBSD_1.3 fgetws_l F
+FBSD_1.3 fmemopen F
+FBSD_1.3 fprintf_l F
+FBSD_1.3 fputwc_l F
+FBSD_1.3 fputws_l F
+FBSD_1.3 freelocale F
+FBSD_1.3 fscanf_l F
+FBSD_1.3 fwprintf_l F
+FBSD_1.3 fwscanf_l F
+FBSD_1.3 getcontextx W F
+FBSD_1.3 getwc_l F
+FBSD_1.3 getwchar_l F
+FBSD_1.3 gid_from_group F
+FBSD_1.3 iconv F
+FBSD_1.3 iconv_close F
+FBSD_1.3 iconv_open F
+FBSD_1.3 iconv_open_into F
+FBSD_1.3 iconv_set_relocation_prefix F
+FBSD_1.3 iconvctl F
+FBSD_1.3 iconvlist F
+FBSD_1.3 isalnum_l F
+FBSD_1.3 isalpha_l F
+FBSD_1.3 isblank_l F
+FBSD_1.3 iscntrl_l F
+FBSD_1.3 isdigit_l F
+FBSD_1.3 isgraph_l F
+FBSD_1.3 ishexnumber_l F
+FBSD_1.3 isideogram_l F
+FBSD_1.3 islower_l F
+FBSD_1.3 isnumber_l F
+FBSD_1.3 isphonogram_l F
+FBSD_1.3 isprint_l F
+FBSD_1.3 ispunct_l F
+FBSD_1.3 isrune_l F
+FBSD_1.3 isspace_l F
+FBSD_1.3 isspecial_l F
+FBSD_1.3 isupper_l F
+FBSD_1.3 iswalnum_l F
+FBSD_1.3 iswalpha_l F
+FBSD_1.3 iswblank_l F
+FBSD_1.3 iswcntrl_l F
+FBSD_1.3 iswctype_l F
+FBSD_1.3 iswdigit_l F
+FBSD_1.3 iswgraph_l F
+FBSD_1.3 iswhexnumber_l F
+FBSD_1.3 iswideogram_l F
+FBSD_1.3 iswlower_l F
+FBSD_1.3 iswnumber_l F
+FBSD_1.3 iswphonogram_l F
+FBSD_1.3 iswprint_l F
+FBSD_1.3 iswpunct_l F
+FBSD_1.3 iswrune_l F
+FBSD_1.3 iswspace_l F
+FBSD_1.3 iswspecial_l F
+FBSD_1.3 iswupper_l F
+FBSD_1.3 iswxdigit_l F
+FBSD_1.3 isxdigit_l F
+FBSD_1.3 localeconv_l F
+FBSD_1.3 mallctl W F
+FBSD_1.3 mallctlbymib W F
+FBSD_1.3 mallctlnametomib W F
+FBSD_1.3 malloc_conf W D 0x8
+FBSD_1.3 malloc_message D 0x8
+FBSD_1.3 malloc_stats_print W F
+FBSD_1.3 mallocx W F
+FBSD_1.3 mblen_l F
+FBSD_1.3 mbrlen_l F
+FBSD_1.3 mbrtoc16 F
+FBSD_1.3 mbrtoc16_l F
+FBSD_1.3 mbrtoc32 F
+FBSD_1.3 mbrtoc32_l F
+FBSD_1.3 mbrtowc_l F
+FBSD_1.3 mbsinit_l F
+FBSD_1.3 mbsnrtowcs_l F
+FBSD_1.3 mbsrtowcs_l F
+FBSD_1.3 mbstowcs_l F
+FBSD_1.3 mbtowc_l F
+FBSD_1.3 mkostemp F
+FBSD_1.3 mkostemps F
+FBSD_1.3 nallocm W F
+FBSD_1.3 nallocx W F
+FBSD_1.3 newlocale F
+FBSD_1.3 nextwctype_l F
+FBSD_1.3 nl_langinfo_l F
+FBSD_1.3 nvis F
+FBSD_1.3 open_memstream F
+FBSD_1.3 open_wmemstream F
+FBSD_1.3 pipe2 W F
+FBSD_1.3 posix_fadvise W F
+FBSD_1.3 printf_l F
+FBSD_1.3 procctl W F
+FBSD_1.3 putwc_l F
+FBSD_1.3 putwchar_l F
+FBSD_1.3 pwcache_groupdb F
+FBSD_1.3 pwcache_userdb F
+FBSD_1.3 querylocale F
+FBSD_1.3 quick_exit F
+FBSD_1.3 rallocm W F
+FBSD_1.3 rallocx W F
+FBSD_1.3 sallocm W F
+FBSD_1.3 sallocx W F
+FBSD_1.3 scanf_l F
+FBSD_1.3 sctp_recvv F
+FBSD_1.3 sctp_sendv F
+FBSD_1.3 snprintf_l F
+FBSD_1.3 snvis F
+FBSD_1.3 sprintf_l F
+FBSD_1.3 sscanf_l F
+FBSD_1.3 strcasecmp_l F
+FBSD_1.3 strcasestr_l F
+FBSD_1.3 strchrnul F
+FBSD_1.3 strcoll_l F
+FBSD_1.3 strenvisx F
+FBSD_1.3 strfmon_l F
+FBSD_1.3 strftime_l F
+FBSD_1.3 strncasecmp_l F
+FBSD_1.3 strnunvis F
+FBSD_1.3 strnunvisx F
+FBSD_1.3 strnvis F
+FBSD_1.3 strnvisx F
+FBSD_1.3 strptime_l F
+FBSD_1.3 strsenvisx F
+FBSD_1.3 strsnvis F
+FBSD_1.3 strsnvisx F
+FBSD_1.3 strsvis F
+FBSD_1.3 strsvisx F
+FBSD_1.3 strtod_l F
+FBSD_1.3 strtof_l F
+FBSD_1.3 strtoimax_l F
+FBSD_1.3 strtol_l F
+FBSD_1.3 strtold_l F
+FBSD_1.3 strtoll_l F
+FBSD_1.3 strtoul_l F
+FBSD_1.3 strtoull_l F
+FBSD_1.3 strtoumax_l F
+FBSD_1.3 strxfrm_l F
+FBSD_1.3 svis F
+FBSD_1.3 swprintf_l F
+FBSD_1.3 swscanf_l F
+FBSD_1.3 tolower_l F
+FBSD_1.3 toupper_l F
+FBSD_1.3 towctrans_l F
+FBSD_1.3 towlower_l F
+FBSD_1.3 towupper_l F
+FBSD_1.3 uid_from_user F
+FBSD_1.3 ungetwc_l F
+FBSD_1.3 unvis F
+FBSD_1.3 uselocale F
+FBSD_1.3 vasprintf_l F
+FBSD_1.3 vfprintf_l F
+FBSD_1.3 vfscanf_l F
+FBSD_1.3 vfwprintf_l F
+FBSD_1.3 vfwscanf_l F
+FBSD_1.3 vprintf_l F
+FBSD_1.3 vscanf_l F
+FBSD_1.3 vsnprintf_l F
+FBSD_1.3 vsprintf_l F
+FBSD_1.3 vsscanf_l F
+FBSD_1.3 vswprintf_l F
+FBSD_1.3 vswscanf_l F
+FBSD_1.3 vwprintf_l F
+FBSD_1.3 vwscanf_l F
+FBSD_1.3 wait6 W F
+FBSD_1.3 waitid W F
+FBSD_1.3 wcrtomb_l F
+FBSD_1.3 wcscoll_l F
+FBSD_1.3 wcsftime_l F
+FBSD_1.3 wcsnrtombs_l F
+FBSD_1.3 wcsrtombs_l F
+FBSD_1.3 wcstod_l F
+FBSD_1.3 wcstof_l F
+FBSD_1.3 wcstoimax_l F
+FBSD_1.3 wcstol_l F
+FBSD_1.3 wcstold_l F
+FBSD_1.3 wcstoll_l F
+FBSD_1.3 wcstombs_l F
+FBSD_1.3 wcstoul_l F
+FBSD_1.3 wcstoull_l F
+FBSD_1.3 wcstoumax_l F
+FBSD_1.3 wcswidth_l F
+FBSD_1.3 wcsxfrm_l F
+FBSD_1.3 wctob_l F
+FBSD_1.3 wctomb_l F
+FBSD_1.3 wctrans_l F
+FBSD_1.3 wctype_l F
+FBSD_1.3 wcwidth_l F
+FBSD_1.3 wprintf_l F
+FBSD_1.3 wscanf_l F
+FBSD_1.3 xallocx W F
+FBSD_1.4 __aligned_alloc F
+FBSD_1.4 __mallctl F
+FBSD_1.4 __mallctlbymib F
+FBSD_1.4 __mallctlnametomib F
+FBSD_1.4 __malloc_stats_print F
+FBSD_1.4 __ns_name_eq F
+FBSD_1.4 __ns_name_labels F
+FBSD_1.4 __ns_name_length F
+FBSD_1.4 __ns_name_map F
+FBSD_1.4 __ns_name_owned F
+FBSD_1.4 __ns_name_pton2 F
+FBSD_1.4 __ns_name_unpack2 F
+FBSD_1.4 __ns_parserr2 F
+FBSD_1.4 __res_nrandomid F
+FBSD_1.4 __res_rndinit F
+FBSD_1.4 __sdallocx F
+FBSD_1.4 atexit_b F
+FBSD_1.4 explicit_bzero F
+FBSD_1.4 fdclose F
+FBSD_1.4 fopencookie F
+FBSD_1.4 futimens W F
+FBSD_1.4 getnetgrent_r F
+FBSD_1.4 hcreate_r F
+FBSD_1.4 hdestroy_r F
+FBSD_1.4 heapsort_b F
+FBSD_1.4 hsearch_r F
+FBSD_1.4 mergesort_b F
+FBSD_1.4 numa_getaffinity F
+FBSD_1.4 numa_setaffinity F
+FBSD_1.4 ppoll W F
+FBSD_1.4 pthread_mutex_consistent W F
+FBSD_1.4 pthread_mutexattr_getrobust W F
+FBSD_1.4 pthread_mutexattr_setrobust W F
+FBSD_1.4 qsort_b F
+FBSD_1.4 reallocarray F
+FBSD_1.4 recvmmsg F
+FBSD_1.4 sdallocx W F
+FBSD_1.4 sendmmsg F
+FBSD_1.4 stravis F
+FBSD_1.4 utimensat W F
+FBSD_1.5 __cxa_thread_atexit F
+FBSD_1.5 __cxa_thread_atexit_impl F
+FBSD_1.5 abort_handler_s F
+FBSD_1.5 alphasort F
+FBSD_1.5 basename F
+FBSD_1.5 clock_nanosleep W F
+FBSD_1.5 cpuset_getdomain W F
+FBSD_1.5 cpuset_setdomain W F
+FBSD_1.5 daemonfd F
+FBSD_1.5 devname F
+FBSD_1.5 devname_r F
+FBSD_1.5 dirname F
+FBSD_1.5 elf_aux_info W F
+FBSD_1.5 fdatasync F
+FBSD_1.5 fhstat W F
+FBSD_1.5 fhstatfs W F
+FBSD_1.5 fstat W F
+FBSD_1.5 fstatat F
+FBSD_1.5 fstatfs W F
+FBSD_1.5 fts_children F
+FBSD_1.5 fts_close F
+FBSD_1.5 fts_get_clientptr F
+FBSD_1.5 fts_get_stream F
+FBSD_1.5 fts_open F
+FBSD_1.5 fts_read F
+FBSD_1.5 fts_set F
+FBSD_1.5 fts_set_clientptr F
+FBSD_1.5 ftw F
+FBSD_1.5 getdents F
+FBSD_1.5 getdirentries W F
+FBSD_1.5 getentropy F
+FBSD_1.5 getfsstat F
+FBSD_1.5 getmntinfo F
+FBSD_1.5 getrandom W F
+FBSD_1.5 gets_s F
+FBSD_1.5 glob F
+FBSD_1.5 globfree F
+FBSD_1.5 ignore_handler_s F
+FBSD_1.5 kevent W F
+FBSD_1.5 lstat F
+FBSD_1.5 memset_s F
+FBSD_1.5 mknod F
+FBSD_1.5 mknodat W F
+FBSD_1.5 nftw F
+FBSD_1.5 readdir F
+FBSD_1.5 readdir_r F
+FBSD_1.5 scandir F
+FBSD_1.5 sem_clockwait_np W F
+FBSD_1.5 set_constraint_handler_s F
+FBSD_1.5 setproctitle_fast F
+FBSD_1.5 stat F
+FBSD_1.5 statfs F
+FBSD_1.5 timespec_get F
+FBSD_1.5 timingsafe_bcmp W F
+FBSD_1.5 timingsafe_memcmp W F
+FBSD_1.6 __sysctlbyname W F
+FBSD_1.6 aio_readv W F
+FBSD_1.6 aio_writev W F
+FBSD_1.6 close_range W F
+FBSD_1.6 copy_file_range W F
+FBSD_1.6 eventfd F
+FBSD_1.6 eventfd_read F
+FBSD_1.6 eventfd_write F
+FBSD_1.6 fflush_unlocked W F
+FBSD_1.6 fhlink W F
+FBSD_1.6 fhlinkat W F
+FBSD_1.6 fhreadlink W F
+FBSD_1.6 fputc_unlocked F
+FBSD_1.6 fputs_unlocked F
+FBSD_1.6 fread_unlocked W F
+FBSD_1.6 funlinkat W F
+FBSD_1.6 fwrite_unlocked F
+FBSD_1.6 getfhat W F
+FBSD_1.6 getlogin_r F
+FBSD_1.6 memalign F
+FBSD_1.6 memfd_create F
+FBSD_1.6 mkostempsat F
+FBSD_1.6 pthread_getname_np W F
+FBSD_1.6 ptsname_r F
+FBSD_1.6 qsort_s F
+FBSD_1.6 rand F
+FBSD_1.6 regcomp F
+FBSD_1.6 scandir_b F
+FBSD_1.6 shm_create_largepage F
+FBSD_1.6 shm_rename W F
+FBSD_1.6 sigandset F
+FBSD_1.6 sigisemptyset F
+FBSD_1.6 sigorset F
+FBSD_1.6 srand F
+FBSD_1.6 strerror_l F
+FBSD_1.6 tcgetwinsize F
+FBSD_1.6 tcsetwinsize F
+FBSD_1.7 _Fork W F
+FBSD_1.7 __cpuset_alloc F
+FBSD_1.7 __cpuset_free F
+FBSD_1.7 __libc_start1 F
+FBSD_1.7 __libc_start1_gcrt F
+FBSD_1.7 acl_cmp_np F
+FBSD_1.7 acl_equiv_mode_np F
+FBSD_1.7 acl_extended_file_nofollow_np F
+FBSD_1.7 acl_extended_file_np F
+FBSD_1.7 acl_extended_link_np F
+FBSD_1.7 acl_from_mode_np F
+FBSD_1.7 clearenv F
+FBSD_1.7 fspacectl W F
+FBSD_1.7 kqueue1 F
+FBSD_1.7 kqueuex W F
+FBSD_1.7 membarrier W F
+FBSD_1.7 mempcpy F
+FBSD_1.7 posix_spawn_file_actions_addchdir_np F
+FBSD_1.7 posix_spawn_file_actions_addclosefrom_np F
+FBSD_1.7 posix_spawn_file_actions_addfchdir_np F
+FBSD_1.7 qsort_r F
+FBSD_1.7 scandirat F
+FBSD_1.7 sched_getaffinity F
+FBSD_1.7 sched_getcpu F
+FBSD_1.7 sched_setaffinity F
+FBSD_1.7 secure_getenv F
+FBSD_1.7 strverscmp F
+FBSD_1.7 swapoff W F
+FBSD_1.7 timerfd_create W F
+FBSD_1.7 timerfd_gettime W F
+FBSD_1.7 timerfd_settime W F
+FBSD_1.7 versionsort F
+FBSD_1.7 wmempcpy F
