@@ -27,21 +27,37 @@ All integers are stored little-endian.
   - null-terminated target triple, e.g. `arm-linux-gnueabi`
 - `u16` number of function inclusions
   - null-terminated symbol name (not repeated for subsequent same symbol inclusions)
-  - Set of Unsized Inclusions
+  - Set of Function Inclusions
 - `u16` number of object inclusions
   - null-terminated symbol name (not repeated for subsequent same symbol inclusions)
-  - Set of Sized Inclusions
+  - Set of Object Inclusions
+- `u16` number of TLS inclusions
+  - null-terminated symbol name (not repeated for subsequent same symbol inclusions)
+  - Set of TLS Inclusions
 
-Set of Unsized Inclusions:
+Set of Function Inclusions:
   - uleb128 (`u64`) set of targets this inclusion applies to (`1 << INDEX_IN_TARGET_LIST`)
   - `u8` index of libc library this inclusion applies to
+    - unversioned is indicated if `1 << 5` bit is set in library index
+    - weak linkage is indicated if `1 << 6` bit is set in library index
     - last inclusion is indicated if `1 << 7` bit is set in library index
   - `[N]u8` set of libc versions this inclusion applies to. MSB set indicates last.
 
-Set of Sized Inclusions:
+Set of Object Inclusions:
   - uleb128 (`u64`) set of targets this inclusion applies to (`1 << INDEX_IN_TARGET_LIST`)
   - uleb128 (`u16`) object size
   - `u8` index of libc library this inclusion applies to
+    - unversioned is indicated if `1 << 5` bit is set in library index
+    - weak linkage is indicated if `1 << 6` bit is set in library index
+    - last inclusion is indicated if `1 << 7` bit is set in library index
+  - `[N]u8` set of libc versions this inclusion applies to. MSB set indicates last.
+
+Set of TLS Inclusions:
+  - uleb128 (`u64`) set of targets this inclusion applies to (`1 << INDEX_IN_TARGET_LIST`)
+  - uleb128 (`u16`) object size
+  - `u8` index of libc library this inclusion applies to
+    - unversioned is indicated if `1 << 5` bit is set in library index
+    - weak linkage is indicated if `1 << 6` bit is set in library index
     - last inclusion is indicated if `1 << 7` bit is set in library index
   - `[N]u8` set of libc versions this inclusion applies to. MSB set indicates last.
 

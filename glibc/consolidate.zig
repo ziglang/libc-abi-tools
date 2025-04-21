@@ -929,6 +929,8 @@ pub fn main() !void {
                 const set_terminal_bit = i >= fn_inclusions.items.len or
                     !mem.eql(u8, name, fn_inclusions.items[i].name);
                 var lib = inc.lib;
+                // Currently no unversioned symbols, so bit 1 << 5 is unset.
+                // Currently no weak symbols, so bit 1 << 6 is unset.
                 if (set_terminal_bit) {
                     lib |= 1 << 7;
                 }
@@ -966,6 +968,8 @@ pub fn main() !void {
                 const set_terminal_bit = i >= obj_inclusions.items.len or
                     !mem.eql(u8, name, obj_inclusions.items[i].name);
                 var lib = inc.lib;
+                // Currently no unversioned symbols, so bit 1 << 5 is unset.
+                // Currently no weak symbols, so bit 1 << 6 is unset.
                 if (set_terminal_bit) {
                     lib |= 1 << 7;
                 }
@@ -985,6 +989,11 @@ pub fn main() !void {
                 if (set_terminal_bit) break;
             }
         }
+    }
+
+    {
+        // TLS Inclusions (currently none)
+        try w.writeInt(u16, 0, .little);
     }
 
     try bw.flush();
