@@ -32,9 +32,9 @@ git clone git://sourceware.org/git/glibc.git
 
 2. Run `consolidate.zig` in this directory:
 
-```sh
-zig run consolidate.zig
-```
+   ```sh
+   zig run consolidate.zig
+   ```
 
 This will generate the file `abilists` which you can then inspect and make sure
 it is OK. Copy it to `$ZIG_GIT_REPO_PATH/lib/libc/glibc/abilists`.

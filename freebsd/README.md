@@ -40,9 +40,9 @@ process by using `.abilist` files, as well as the same `abilists` binary format.
 
 2. Run `consolidate.zig` in this directory.
 
-```sh
-zig run consolidate.zig
-```
+   ```sh
+   zig run consolidate.zig
+   ```
 
 This will generate the file `abilists` which you can then inspect and make sure
 it is OK. Copy it to `$ZIG_GIT_REPO_PATH/lib/libc/freebsd/abilists`.
