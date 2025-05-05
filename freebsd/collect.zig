@@ -136,8 +136,14 @@ pub fn main() !void {
                 pub fn lessThan(ctx: void, a: Symbol, b: Symbol) bool {
                     _ = ctx;
 
-                    if (b.version == null) return false;
-                    if (a.version == null) return true;
+                    if (a.version == null) {
+                        if (b.version != null) return true;
+
+                        return switch (std.mem.order(u8, a.name, b.name)) {
+                            .gt, .eq => false,
+                            .lt => true,
+                        };
+                    } else if (b.version == null) return false;
 
                     return switch (std.mem.order(u8, a.version.?, b.version.?)) {
                         .gt => false,
