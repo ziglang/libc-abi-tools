@@ -33,6 +33,7 @@ const lib_names = [_][]const u8{
     "dl",
     "elf",
     "execinfo",
+    "ld",
     "m",
     "rt",
     "stdthreads",
@@ -204,7 +205,10 @@ pub fn main() !void {
                 const abilist_path = try fs.path.join(arena, &.{
                     prefix,
                     target.name,
-                    try fmt.allocPrint(arena, "lib{s}.abilist", .{lib_name}),
+                    try fmt.allocPrint(arena, "{s}{s}.abilist", .{
+                        if (std.mem.eql(u8, lib_name, "ld")) "" else "lib",
+                        lib_name,
+                    }),
                 });
 
                 const contents = try version_dir.readFileAlloc(arena, abilist_path, 10 * 1024 * 1024);

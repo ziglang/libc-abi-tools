@@ -23,15 +23,16 @@ const Library = struct {
 /// `pthread` is only an alias for `thr`.
 /// `xnet` is only an alias for `c`.
 const libs = [_]Library{
-    .{ .name = "c", .dir = "/lib", .sover = 7 },
-    .{ .name = "dl", .dir = "/usr/lib", .sover = 1 },
-    .{ .name = "elf", .dir = "/lib", .sover = 2 },
-    .{ .name = "execinfo", .dir = "/usr/lib", .sover = 1 },
-    .{ .name = "m", .dir = "/lib", .sover = 5 },
-    .{ .name = "rt", .dir = "/lib", .sover = 1 },
-    .{ .name = "stdthreads", .dir = "/usr/lib", .sover = 0 },
-    .{ .name = "thr", .dir = "/lib", .sover = 3 },
-    .{ .name = "util", .dir = "/lib", .sover = 9 },
+    .{ .name = "ld", .dir = "/libexec", .sover = 1 },
+    .{ .name = "libc", .dir = "/lib", .sover = 7 },
+    .{ .name = "libdl", .dir = "/usr/lib", .sover = 1 },
+    .{ .name = "libelf", .dir = "/lib", .sover = 2 },
+    .{ .name = "libexecinfo", .dir = "/usr/lib", .sover = 1 },
+    .{ .name = "libm", .dir = "/lib", .sover = 5 },
+    .{ .name = "librt", .dir = "/lib", .sover = 1 },
+    .{ .name = "libstdthreads", .dir = "/usr/lib", .sover = 0 },
+    .{ .name = "libthr", .dir = "/lib", .sover = 3 },
+    .{ .name = "libutil", .dir = "/lib", .sover = 9 },
 };
 
 const blacklist = [_][]const u8{
@@ -100,10 +101,10 @@ pub fn main() !void {
         for (libs) |lib| {
             const elf_bytes = try sysroots_dir.readFileAllocOptions(
                 arena,
-                try std.fmt.allocPrint(arena, "{s}{s}/lib{s}.so.{d}", .{
+                try std.fmt.allocPrint(arena, "{s}{s}/{s}.so.{d}", .{
                     arch,
                     lib.dir,
-                    lib.name,
+                    if (std.mem.eql(u8, lib.name, "ld")) "ld-elf" else lib.name,
                     lib.sover,
                 }),
                 100 * 1024 * 1024,
@@ -156,7 +157,7 @@ pub fn main() !void {
                 }
             }.lessThan);
 
-            var af = try dest_dir.atomicFile(try std.fmt.allocPrint(arena, "lib{s}.abilist", .{lib.name}), .{});
+            var af = try dest_dir.atomicFile(try std.fmt.allocPrint(arena, "{s}.abilist", .{lib.name}), .{});
             defer af.deinit();
 
             var bw = std.io.bufferedWriter(af.file.writer());
@@ -275,7 +276,7 @@ fn parseElf(parse: *Parse, comptime is_64: bool, comptime endian: std.builtin.En
 
             // If a new libelf version appears, we may need special handling for it throughout because there isn't a
             // generic connection between these versions and the FreeBSD OS version, like with FBSD_x.y.
-            if (std.mem.eql(u8, parse.lib, "elf") and
+            if (std.mem.eql(u8, parse.lib, "libelf") and
                 !std.mem.eql(u8, name, "R1.0") and
                 !std.mem.eql(u8, name, "R1.1")) @panic("new libelf version detected");
 
