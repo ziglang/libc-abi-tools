@@ -108,7 +108,7 @@ pub fn main() !void {
                 }),
                 100 * 1024 * 1024,
                 3 * 1024 * 1024,
-                @alignOf(std.elf.Elf64_Ehdr),
+                .of(std.elf.Elf64_Ehdr),
                 null,
             );
             const header = try std.elf.Header.parse(elf_bytes[0..@sizeOf(std.elf.Elf64_Ehdr)]);
