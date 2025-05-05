@@ -30,7 +30,9 @@ git clone git://sourceware.org/git/glibc.git
 
 1. Add the new glibc versions to the `versions` global constant.
 
-2. Run `consolidate.zig` in this directory:
+2. Make sure that `lib_names`, `zig_targets`, and `abi_lists` are up to date.
+
+3. Run `consolidate.zig` in this directory:
 
    ```sh
    zig run consolidate.zig
