@@ -16,6 +16,8 @@ process by using `.abilist` files, as well as the same `abilists` binary format.
 
 1. Follow [these instructions](https://github.com/ziglang/zig/wiki/Updating-libc#freebsd).
 
+2. Make sure that `arches` and `libs` are up to date.
+
 3. Run the tool to generate the new `.abilist` files:
 
    ```sh
@@ -27,7 +29,8 @@ process by using `.abilist` files, as well as the same `abilists` binary format.
    * `FREEBSD_SYSROOT_PATH` contains `amd64`, `aarch64`, etc directories.
    * `FBSD_LIBC_VERSION` should be e.g. `1.7`.
 
-   Pay attention to any warnings printed; make adjustments as necessary.
+   Pay attention to any warnings printed; make adjustments as necessary, e.g. to
+   `blacklist`.
 
 4. This inspects the ELF shared libraries for each target you built earlier and
    generates `.abilist` files namespaced under the version number.
@@ -38,7 +41,9 @@ process by using `.abilist` files, as well as the same `abilists` binary format.
 
 1. Add the new FreeBSD libc versions to the `versions` global constant.
 
-2. Run `consolidate.zig` in this directory.
+2. Make sure that `lib_names` and `zig_targets` are up to date.
+
+3. Run `consolidate.zig` in this directory.
 
    ```sh
    zig run consolidate.zig
