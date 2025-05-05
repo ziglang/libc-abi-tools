@@ -1,0 +1,14 @@
+FBSD_1.0 __tls_get_addr F
+FBSD_1.0 _rtld_error F
+FBSD_1.0 dl_iterate_phdr F
+FBSD_1.0 dladdr F
+FBSD_1.0 dlclose F
+FBSD_1.0 dlerror F
+FBSD_1.0 dlfunc F
+FBSD_1.0 dlinfo F
+FBSD_1.0 dllockinit F
+FBSD_1.0 dlopen F
+FBSD_1.0 dlsym F
+FBSD_1.0 dlvsym F
+FBSD_1.0 r_debug_state F
+FBSD_1.3 fdlopen F
