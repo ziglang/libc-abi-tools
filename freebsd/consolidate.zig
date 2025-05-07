@@ -31,7 +31,6 @@ const ZigTarget = struct {
 const lib_names = [_][]const u8{
     "c",
     "dl",
-    "elf",
     "execinfo",
     "ld",
     "m",
@@ -66,9 +65,6 @@ const first_fs_ver: std.SemanticVersion = .{
 };
 
 const versions = [_]std.SemanticVersion{
-    // The inclusion of 1.0 and 1.1 here is particularly important for libelf since it uses the
-    // `Rx.y` scheme (which is completely independent of FreeBSD releases) rather than `FBSD_x.y`.
-    // A reader of the resulting `abilists` file has to be aware of this libelf quirk.
     .{ .major = 1, .minor = 0, .patch = 0 },
     .{ .major = 1, .minor = 1, .patch = 0 },
     .{ .major = 1, .minor = 2, .patch = 0 },

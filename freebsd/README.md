@@ -1,7 +1,7 @@
 # FreeBSD libc ABI tools
 
 This directory contains `.abilist` files from every version of FreeBSD libc
-starting from FreeBSD 14.0. These files are consolidated to generate a single 47
+starting from FreeBSD 14.0. These files are consolidated to generate a single 46
 KB symbol mapping file that is shipped with Zig to target any version of FreeBSD
 starting from 7.0.
 
@@ -61,9 +61,3 @@ Compared to [glibc](../glibc), the `.abilist` files here have some differences:
   this.
 * There can be an extra field containing a `W` before the category field. If
   present, this indicates that the symbol has weak linkage.
-
-Additionally, a reader of the consolidated `abilists` file should be aware that
-libelf uses its own versioning scheme that is wholly independent of FreeBSD OS
-or libc versions. At the time of writing, libelf has the versions `R1.0` and
-`R1.1`; contrast with FreeBSD libc's `FBSD_1.0` through `FBSD_1.7`. `R1.0` was
-available starting from FreeBSD 11.0, and `R1.1` starting from FreeBSD 13.0.

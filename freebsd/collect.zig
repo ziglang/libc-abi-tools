@@ -26,7 +26,6 @@ const libs = [_]Library{
     .{ .name = "ld", .dir = "/libexec", .sover = 1 },
     .{ .name = "libc", .dir = "/lib", .sover = 7 },
     .{ .name = "libdl", .dir = "/usr/lib", .sover = 1 },
-    .{ .name = "libelf", .dir = "/lib", .sover = 2 },
     .{ .name = "libexecinfo", .dir = "/usr/lib", .sover = 1 },
     .{ .name = "libm", .dir = "/lib", .sover = 5 },
     .{ .name = "librt", .dir = "/lib", .sover = 1 },
@@ -273,12 +272,6 @@ fn parseElf(parse: *Parse, comptime is_64: bool, comptime endian: std.builtin.En
                 try versions.put(@intFromEnum(ndx), .private);
                 continue;
             }
-
-            // If a new libelf version appears, we may need special handling for it throughout because there isn't a
-            // generic connection between these versions and the FreeBSD OS version, like with FBSD_x.y.
-            if (std.mem.eql(u8, parse.lib, "libelf") and
-                !std.mem.eql(u8, name, "R1.0") and
-                !std.mem.eql(u8, name, "R1.1")) @panic("new libelf version detected");
 
             // This can happen when the FreeBSD developers backport stuff to a previous release, especially if the
             // libraries being parsed were built from a point release such as 14.1.0 (= FBSD_1.7).
