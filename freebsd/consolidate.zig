@@ -29,15 +29,15 @@ const ZigTarget = struct {
 /// `pthread` is only an alias for `thr`.
 /// `xnet` is only an alias for `c`.
 const lib_names = [_][]const u8{
-    "c",
-    "dl",
-    "execinfo",
-    "ld",
     "m",
-    "rt",
     "stdthreads",
     "thr",
+    "c",
+    "dl",
+    "rt",
+    "ld",
     "util",
+    "execinfo",
 };
 
 /// This is organized by grouping together at the beginning,

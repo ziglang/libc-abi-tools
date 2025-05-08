@@ -23,15 +23,15 @@ const Library = struct {
 /// `pthread` is only an alias for `thr`.
 /// `xnet` is only an alias for `c`.
 const libs = [_]Library{
-    .{ .name = "ld", .dir = "/libexec", .sover = 1 },
-    .{ .name = "libc", .dir = "/lib", .sover = 7 },
-    .{ .name = "libdl", .dir = "/usr/lib", .sover = 1 },
-    .{ .name = "libexecinfo", .dir = "/usr/lib", .sover = 1 },
     .{ .name = "libm", .dir = "/lib", .sover = 5 },
-    .{ .name = "librt", .dir = "/lib", .sover = 1 },
     .{ .name = "libstdthreads", .dir = "/usr/lib", .sover = 0 },
     .{ .name = "libthr", .dir = "/lib", .sover = 3 },
+    .{ .name = "libc", .dir = "/lib", .sover = 7 },
+    .{ .name = "libdl", .dir = "/usr/lib", .sover = 1 },
+    .{ .name = "librt", .dir = "/lib", .sover = 1 },
+    .{ .name = "ld", .dir = "/libexec", .sover = 1 },
     .{ .name = "libutil", .dir = "/lib", .sover = 9 },
+    .{ .name = "libexecinfo", .dir = "/usr/lib", .sover = 1 },
 };
 
 const blacklist = [_][]const u8{
