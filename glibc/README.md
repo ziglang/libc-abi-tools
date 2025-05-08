@@ -1,7 +1,7 @@
 # glibc ABI tools
 
 This directory contains `.abilist` files from every version of glibc. These
-files are consolidated to generate a single 241 KB symbol mapping file that is
+files are consolidated to generate a single 247 KB symbol mapping file that is
 shipped with Zig to target any version of glibc.
 
 ## Adding `.abilist` files for a new glibc version
