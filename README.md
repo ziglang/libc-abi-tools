@@ -12,6 +12,7 @@ made to keep them compact.
 Currently supported libcs:
 
 * Linux glibc
+* FreeBSD libc
 
 ## `abilists` binary format
 
