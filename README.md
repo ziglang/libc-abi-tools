@@ -24,7 +24,7 @@ All integers are stored little-endian.
   - `u8` minor
   - `u8` patch
 - `u8` number of targets. For each:
-  - null-terminated target triple, e.g. `arm-linux-gnueabi`
+  - null-terminated target string, e.g. `arm-linux-gnueabi`
 - `u16` number of function inclusions
   - null-terminated symbol name (not repeated for subsequent same symbol inclusions)
   - Set of Function Inclusions
@@ -41,7 +41,8 @@ Set of Function Inclusions:
     - unversioned is indicated if `1 << 5` bit is set in library index
     - weak linkage is indicated if `1 << 6` bit is set in library index
     - last inclusion is indicated if `1 << 7` bit is set in library index
-  - `[N]u8` set of libc versions this inclusion applies to. MSB set indicates last.
+  - `[N]u8` set of libc versions this inclusion applies to
+    - last version index is indicated if `1 << 7` bit is set in version index
 
 Set of Object Inclusions:
   - uleb128 (`u64`) set of targets this inclusion applies to (`1 << INDEX_IN_TARGET_LIST`)
@@ -50,7 +51,8 @@ Set of Object Inclusions:
     - unversioned is indicated if `1 << 5` bit is set in library index
     - weak linkage is indicated if `1 << 6` bit is set in library index
     - last inclusion is indicated if `1 << 7` bit is set in library index
-  - `[N]u8` set of libc versions this inclusion applies to. MSB set indicates last.
+  - `[N]u8` set of libc versions this inclusion applies to
+    - last version index is indicated if `1 << 7` bit is set in version index
 
 Set of TLS Inclusions:
   - uleb128 (`u64`) set of targets this inclusion applies to (`1 << INDEX_IN_TARGET_LIST`)
@@ -59,7 +61,8 @@ Set of TLS Inclusions:
     - unversioned is indicated if `1 << 5` bit is set in library index
     - weak linkage is indicated if `1 << 6` bit is set in library index
     - last inclusion is indicated if `1 << 7` bit is set in library index
-  - `[N]u8` set of libc versions this inclusion applies to. MSB set indicates last.
+  - `[N]u8` set of libc versions this inclusion applies to
+    - last version index is indicated if `1 << 7` bit is set in version index
 
 ## Debugging an abilists file
 
