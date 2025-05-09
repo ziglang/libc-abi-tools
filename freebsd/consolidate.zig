@@ -49,7 +49,7 @@ const zig_targets = [_]ZigTarget{
 
     .{ .name = "aarch64", .arch = .aarch64, .abi = .none },
     .{ .name = "powerpc64", .arch = .powerpc64, .abi = .none },
-    .{ .name = "powerpc64le", .arch = .powerpc64le, .abi = .none },
+    .{ .name = "powerpc64", .arch = .powerpc64le, .abi = .none },
     .{ .name = "riscv64", .arch = .riscv64, .abi = .none },
     .{ .name = "amd64", .arch = .x86_64, .abi = .none },
 };

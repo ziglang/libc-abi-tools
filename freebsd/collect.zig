@@ -10,7 +10,6 @@ const arches = [_][]const u8{
     "i386",
     "powerpc",
     "powerpc64",
-    "powerpc64le",
     "riscv64",
 };
 
