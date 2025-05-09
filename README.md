@@ -11,8 +11,9 @@ made to keep them compact.
 
 Currently supported libcs:
 
-* Linux glibc
 * FreeBSD libc
+* Linux glibc
+* NetBSD libc
 
 ## `abilists` binary format
 
