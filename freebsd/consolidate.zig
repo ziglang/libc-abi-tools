@@ -248,15 +248,6 @@ pub fn main() !void {
                     else
                         unreachable;
 
-                    // Detect incorrect information when a symbol migrates from one library
-                    // to another.
-                    if (ver.order(fs_ver) == .lt and fs_ver.order(first_fs_ver) != .eq) {
-                        // This abilist is claiming that this version is found in this
-                        // library. However if that was true, we would have already
-                        // noted it in the previous set of abilists.
-                        continue;
-                    }
-
                     const gop = try symbols.getOrPut(name);
                     if (!gop.found_existing) gop.value_ptr.* = .{};
 
