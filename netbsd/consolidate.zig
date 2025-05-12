@@ -373,8 +373,7 @@ pub fn main() !void {
                 // of the rest of the targets as possible.
                 while (wanted_targets != 0) {
                     const test_targ_index = @ctz(wanted_targets);
-                    if (wanted_weak_multi[test_targ_index] == wanted_weak)
-                    {
+                    if (wanted_weak_multi[test_targ_index] == wanted_weak) {
                         const new_inc: Inclusion = .{
                             .versions = inc.versions,
                             .targets = inc.targets | (@as(u64, 1) << @intCast(test_targ_index)),
@@ -631,16 +630,8 @@ pub fn main() !void {
                 }
                 try w.writeByte(lib);
 
-                var buf: [versions.len]u8 = undefined;
-                var buf_index: usize = 0;
-                for (versions, 0..) |_, ver_i| {
-                    if ((inc.versions & (@as(u64, 1) << @intCast(ver_i))) != 0) {
-                        buf[buf_index] = @intCast(ver_i);
-                        buf_index += 1;
-                    }
-                }
-                buf[buf_index - 1] |= 0b1000_0000;
-                try w.writeAll(buf[0..buf_index]);
+                // For unversioned inclusions, we only need to write the earliest version.
+                try w.writeByte(@as(u8, @ctz(inc.versions)) | 0b1000_0000);
 
                 if (set_terminal_bit) break;
             }
@@ -672,16 +663,8 @@ pub fn main() !void {
                 }
                 try w.writeByte(lib);
 
-                var buf: [versions.len]u8 = undefined;
-                var buf_index: usize = 0;
-                for (versions, 0..) |_, ver_i| {
-                    if ((inc.versions & (@as(u64, 1) << @intCast(ver_i))) != 0) {
-                        buf[buf_index] = @intCast(ver_i);
-                        buf_index += 1;
-                    }
-                }
-                buf[buf_index - 1] |= 0b1000_0000;
-                try w.writeAll(buf[0..buf_index]);
+                // For unversioned inclusions, we only need to write the earliest version.
+                try w.writeByte(@as(u8, @ctz(inc.versions)) | 0b1000_0000);
 
                 if (set_terminal_bit) break;
             }

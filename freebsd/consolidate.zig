@@ -862,16 +862,21 @@ pub fn main() !void {
                 }
                 try w.writeByte(lib);
 
-                var buf: [versions.len]u8 = undefined;
-                var buf_index: usize = 0;
-                for (versions, 0..) |_, ver_i| {
-                    if ((inc.versions & (@as(u64, 1) << @intCast(ver_i))) != 0) {
-                        buf[buf_index] = @intCast(ver_i);
-                        buf_index += 1;
+                // For unversioned inclusions, we only need to write the earliest version.
+                if (inc.unversioned) {
+                    try w.writeByte(@as(u8, @ctz(inc.versions)) | 0b1000_0000);
+                } else {
+                    var buf: [versions.len]u8 = undefined;
+                    var buf_index: usize = 0;
+                    for (versions, 0..) |_, ver_i| {
+                        if ((inc.versions & (@as(u64, 1) << @intCast(ver_i))) != 0) {
+                            buf[buf_index] = @intCast(ver_i);
+                            buf_index += 1;
+                        }
                     }
+                    buf[buf_index - 1] |= 0b1000_0000;
+                    try w.writeAll(buf[0..buf_index]);
                 }
-                buf[buf_index - 1] |= 0b1000_0000;
-                try w.writeAll(buf[0..buf_index]);
 
                 if (set_terminal_bit) break;
             }
@@ -905,16 +910,21 @@ pub fn main() !void {
                 }
                 try w.writeByte(lib);
 
-                var buf: [versions.len]u8 = undefined;
-                var buf_index: usize = 0;
-                for (versions, 0..) |_, ver_i| {
-                    if ((inc.versions & (@as(u64, 1) << @intCast(ver_i))) != 0) {
-                        buf[buf_index] = @intCast(ver_i);
-                        buf_index += 1;
+                // For unversioned inclusions, we only need to write the earliest version.
+                if (inc.unversioned) {
+                    try w.writeByte(@as(u8, @ctz(inc.versions)) | 0b1000_0000);
+                } else {
+                    var buf: [versions.len]u8 = undefined;
+                    var buf_index: usize = 0;
+                    for (versions, 0..) |_, ver_i| {
+                        if ((inc.versions & (@as(u64, 1) << @intCast(ver_i))) != 0) {
+                            buf[buf_index] = @intCast(ver_i);
+                            buf_index += 1;
+                        }
                     }
+                    buf[buf_index - 1] |= 0b1000_0000;
+                    try w.writeAll(buf[0..buf_index]);
                 }
-                buf[buf_index - 1] |= 0b1000_0000;
-                try w.writeAll(buf[0..buf_index]);
 
                 if (set_terminal_bit) break;
             }
@@ -948,16 +958,21 @@ pub fn main() !void {
                 }
                 try w.writeByte(lib);
 
-                var buf: [versions.len]u8 = undefined;
-                var buf_index: usize = 0;
-                for (versions, 0..) |_, ver_i| {
-                    if ((inc.versions & (@as(u64, 1) << @intCast(ver_i))) != 0) {
-                        buf[buf_index] = @intCast(ver_i);
-                        buf_index += 1;
+                // For unversioned inclusions, we only need to write the earliest version.
+                if (inc.unversioned) {
+                    try w.writeByte(@as(u8, @ctz(inc.versions)) | 0b1000_0000);
+                } else {
+                    var buf: [versions.len]u8 = undefined;
+                    var buf_index: usize = 0;
+                    for (versions, 0..) |_, ver_i| {
+                        if ((inc.versions & (@as(u64, 1) << @intCast(ver_i))) != 0) {
+                            buf[buf_index] = @intCast(ver_i);
+                            buf_index += 1;
+                        }
                     }
+                    buf[buf_index - 1] |= 0b1000_0000;
+                    try w.writeAll(buf[0..buf_index]);
                 }
-                buf[buf_index - 1] |= 0b1000_0000;
-                try w.writeAll(buf[0..buf_index]);
 
                 if (set_terminal_bit) break;
             }
