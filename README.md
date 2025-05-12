@@ -26,7 +26,7 @@ All integers are stored little-endian.
   - `u8` minor
   - `u8` patch
 - `u8` number of targets. For each:
-  - null-terminated target string, e.g. `arm-linux-gnueabi`
+  - null-terminated target string, e.g. `"arm-linux-gnueabi\x00"`
 - `u16` number of function inclusions
   - null-terminated symbol name (not repeated for subsequent same symbol inclusions)
   - Set of Function Inclusions
@@ -66,7 +66,7 @@ Set of TLS Inclusions:
   - `[N]u8` set of libc versions this inclusion applies to
     - last version index is indicated if `1 << 7` bit is set in version index
 
-## Debugging an abilists file
+## Debugging an `abilists` file
 
 ```sh
 zig run list.zig -- abilists
