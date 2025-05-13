@@ -14,7 +14,6 @@ const arches = [_][]const u8{
     "evbmipsn64",
     "evbmipssf",
     "evbppc",
-    "evbppc64",
     "evbppcsf",
     "evbsh3",
     "evbsh3sf",
@@ -22,8 +21,6 @@ const arches = [_][]const u8{
     "i386",
     "mac68k",
     "mac68ksf",
-    "riscv32",
-    "riscv64",
     "sparc",
     "sparc64",
 };

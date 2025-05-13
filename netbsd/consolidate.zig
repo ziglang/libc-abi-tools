@@ -48,14 +48,11 @@ const zig_targets = [_]ZigTarget{
     .{ .name = "evbmips", .arch = .mips, .abi = .eabihf },
     .{ .name = "evbppcsf", .arch = .powerpc, .abi = .eabi },
     .{ .name = "evbppc", .arch = .powerpc, .abi = .eabihf },
-    .{ .name = "riscv32", .arch = .riscv32, .abi = .none },
     .{ .name = "sparc", .arch = .sparc, .abi = .none },
     .{ .name = "i386", .arch = .x86, .abi = .none },
 
     .{ .name = "evbarm64", .arch = .aarch64, .abi = .none },
     .{ .name = "evbarm64", .arch = .aarch64_be, .abi = .none },
-    .{ .name = "evbppc64", .arch = .powerpc64, .abi = .none },
-    .{ .name = "riscv64", .arch = .riscv64, .abi = .none },
     .{ .name = "sparc64", .arch = .sparc64, .abi = .none },
     .{ .name = "amd64", .arch = .x86_64, .abi = .none },
 };
