@@ -120,10 +120,12 @@ const Symbol = struct {
     kind: union(Tag) {
         func,
         object: u64,
+        tls: u64,
 
         const Tag = enum(u8) {
             func = 'F',
             object = 'D',
+            tls = 'T',
         };
     },
     weak: bool,
@@ -304,7 +306,7 @@ fn parseElf(parse: *Parse, comptime is_64: bool, comptime endian: std.builtin.En
 
         switch (ty) {
             std.elf.STT_FUNC, std.elf.STT_GNU_IFUNC => {},
-            std.elf.STT_OBJECT => if (size == 0) @panic("missing size for data symbol"),
+            std.elf.STT_OBJECT, std.elf.STT_TLS => if (size == 0) @panic("missing size for data symbol"),
             else => {
                 std.log.warn("{s} {s}: skipping '{s}' due to it having type '{d}'", .{
                     parse.arch, parse.lib, name, ty,
@@ -318,6 +320,7 @@ fn parseElf(parse: *Parse, comptime is_64: bool, comptime endian: std.builtin.En
             .kind = switch (ty) {
                 std.elf.STT_FUNC, std.elf.STT_GNU_IFUNC => .func,
                 std.elf.STT_OBJECT => .{ .object = size },
+                std.elf.STT_TLS => .{ .tls = size },
                 else => unreachable,
             },
             .weak = binding == std.elf.STB_WEAK,
