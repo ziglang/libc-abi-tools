@@ -46,6 +46,8 @@ const zig_targets = [_]ZigTarget{
     .{ .name = "mac68k", .arch = .m68k, .abi = .none },
     .{ .name = "evbmipssf", .arch = .mips, .abi = .eabi },
     .{ .name = "evbmips", .arch = .mips, .abi = .eabihf },
+    .{ .name = "evbmipssf", .arch = .mipsel, .abi = .eabi },
+    .{ .name = "evbmips", .arch = .mipsel, .abi = .eabihf },
     .{ .name = "evbppcsf", .arch = .powerpc, .abi = .eabi },
     .{ .name = "evbppc", .arch = .powerpc, .abi = .eabihf },
     .{ .name = "sparc", .arch = .sparc, .abi = .none },

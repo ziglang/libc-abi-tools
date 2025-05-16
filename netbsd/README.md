@@ -1,7 +1,7 @@
 # NetBSD libc ABI tools
 
 This directory contains `.abilist` files from every version of NetBSD libc
-starting from NetBSD 10.1. These files are consolidated to generate a single 112
+starting from NetBSD 10.1. These files are consolidated to generate a single 106
 KB symbol mapping file that is shipped with Zig to target any version of NetBSD
 starting from that point.
 
