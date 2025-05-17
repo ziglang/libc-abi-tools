@@ -351,18 +351,18 @@ const Symbol = struct {
     fn testInclusion(symbol: Symbol, inc: Inclusion, lib_i: u8) bool {
         for (symbol.type[lib_i], 0..) |versions_row, targets_i| {
             for (versions_row, 0..) |ty, versions_i| {
+                if ((inc.targets & (@as(u64, 1) << @intCast(targets_i))) == 0 or
+                    (inc.versions & (@as(u64, 1) << @intCast(versions_i))) == 0)
+                    continue;
+
                 switch (ty) {
-                    .absent => {
-                        if ((inc.targets & (@as(u64, 1) << @intCast(targets_i)) ) != 0 and
-                            (inc.versions & (@as(u64, 1) << @intCast(versions_i)) ) != 0)
-                        {
-                            return false;
-                        }
-                    },
-                    .function, .object => continue,
+                    .absent => return false,
+                    .function => {},
+                    .object => |size| if (inc.size != size) return false,
                 }
             }
         }
+
         return true;
     }
 };
