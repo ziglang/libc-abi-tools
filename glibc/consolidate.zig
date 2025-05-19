@@ -383,15 +383,13 @@ pub fn main() !void {
     var arena_instance = std.heap.ArenaAllocator.init(std.heap.page_allocator);
     const arena = arena_instance.allocator();
 
-    //const args = try std.process.argsAlloc(arena);
-
-    var version_dir = try fs.cwd().openDir(".", .{.iterate = true});
-    defer version_dir.close();
+    var glibc_dir = try fs.cwd().openDir(".", .{.iterate = true});
+    defer glibc_dir.close();
 
     const fs_versions = v: {
         var fs_versions = std.ArrayList(Version).init(arena);
 
-        var version_dir_it = version_dir.iterate();
+        var version_dir_it = glibc_dir.iterate();
         while (try version_dir_it.next()) |entry| {
             if (entry.kind != .directory) continue;
             try fs_versions.append(try Version.parse(entry.name));
@@ -525,7 +523,7 @@ pub fn main() !void {
                 };
 
                 const max_bytes = 10 * 1024 * 1024;
-                const contents = version_dir.readFileAlloc(arena, abi_list_filename, max_bytes) catch |err| {
+                const contents = glibc_dir.readFileAlloc(arena, abi_list_filename, max_bytes) catch |err| {
                     fatal("unable to open {s}: {}", .{ abi_list_filename, err });
                 };
                 var lines_it = std.mem.tokenizeScalar(u8, contents, '\n');

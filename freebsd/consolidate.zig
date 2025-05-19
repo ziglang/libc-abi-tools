@@ -163,13 +163,13 @@ pub fn main() !void {
     var arena_instance = std.heap.ArenaAllocator.init(std.heap.page_allocator);
     const arena = arena_instance.allocator();
 
-    var version_dir = try fs.cwd().openDir(".", .{ .iterate = true });
-    defer version_dir.close();
+    var freebsd_dir = try fs.cwd().openDir(".", .{ .iterate = true });
+    defer freebsd_dir.close();
 
     const fs_versions = v: {
         var fs_versions = std.ArrayList(std.SemanticVersion).init(arena);
 
-        var version_dir_it = version_dir.iterate();
+        var version_dir_it = freebsd_dir.iterate();
         while (try version_dir_it.next()) |entry| {
             if (entry.kind != .directory) continue;
             try fs_versions.append(try std.SemanticVersion.parse(try std.fmt.allocPrint(arena, "{s}.0", .{entry.name})));
@@ -206,7 +206,7 @@ pub fn main() !void {
                     }),
                 });
 
-                const contents = try version_dir.readFileAlloc(arena, abilist_path, 10 * 1024 * 1024);
+                const contents = try freebsd_dir.readFileAlloc(arena, abilist_path, 10 * 1024 * 1024);
 
                 var lines_it = std.mem.tokenizeScalar(u8, contents, '\n');
                 while (lines_it.next()) |line| {
