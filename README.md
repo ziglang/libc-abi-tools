@@ -13,6 +13,7 @@ Currently supported libcs:
 
 * FreeBSD libc
 * Linux glibc
+* Linux musl
 * NetBSD libc
 
 ## `abilists` binary format
