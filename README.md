@@ -15,6 +15,7 @@ Currently supported libcs:
 * Linux glibc
 * Linux musl
 * NetBSD libc
+* SerenityOS libc
 
 ## `abilists` binary format
 
