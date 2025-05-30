@@ -11,11 +11,11 @@ made to keep them compact.
 
 Currently supported libcs:
 
-* FreeBSD libc
-* Linux glibc
-* Linux musl
-* NetBSD libc
-* SerenityOS libc
+* [FreeBSD libc](freebsd)
+* [Linux glibc](glibc)
+* [Linux musl](musl)
+* [NetBSD libc](netbsd)
+* [SerenityOS libc](serenity)
 
 ## `abilists` binary format
 
