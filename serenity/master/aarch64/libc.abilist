@@ -1,4 +1,5 @@
  _Exit F
+ __allocation_enabled T 0x1
  __assertion_failed F
  __auxiliary_vector D 0x8
  __begin_atexit_locking F
@@ -40,21 +41,11 @@
  __heap_is_stable D 0x1
  __libc_init F
  __malloc_init F
- __pthread_fork_atfork_register_child F
- __pthread_fork_atfork_register_parent F
- __pthread_fork_atfork_register_prepare F
- __pthread_fork_child F
- __pthread_fork_parent F
- __pthread_fork_prepare F
- __pthread_key_destroy_for_current_thread F
- __pthread_maybe_cancel F
- __pthread_mutex_lock_pessimistic_np F
  __stack_chk_fail F
  __stack_chk_guard D 0x8
  __stdio_init F
  __stdio_is_initialized D 0x1
  __tls_get_addr F
- __utimens F
  _abort F
  _ctype_ D 0x101
  _exit F
@@ -188,7 +179,6 @@
  erfcl F
  erff F
  erfl F
- errno_storage T 0x4
  execl F
  execle F
  execlp F
@@ -738,13 +728,6 @@
  round F
  roundf F
  roundl F
- s_allocation_enabled T 0x1
- s_dlerror_retrieved T 0x1
- s_dlerror_text T 0x8
- s_stack_location T 0x8
- s_stack_size T 0x8
- s_thread_cancel_state T 0x4
- s_thread_cancel_type T 0x4
  sbrk F
  scalbln F
  scalblnl F
@@ -909,7 +892,6 @@
  syslog F
  syslog_r F
  system F
- t_specifics T 0x200
  tan F
  tanf F
  tanh F

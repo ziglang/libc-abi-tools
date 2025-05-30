@@ -10,7 +10,7 @@ have `.abilist` files for its libc, and in fact does not use symbol versioning
 at all.
 
 As SerenityOS does not have tagged releases, we only track `master`. We are
-currently on commit `98dd81e5ac3fa680bd032aaf006112d2f8cd5c9d`.
+currently on commit `afaae388fb3f5dca9d2de4117f56174308b2840d`.
 
 ## Generating `.abilist` files for a SerenityOS commit
 
