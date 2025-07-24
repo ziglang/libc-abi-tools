@@ -51,7 +51,6 @@
  _exit F
  _longjmp F
  _setjmp F
- _sigsetjmp F
  abort F
  abs F
  accept F

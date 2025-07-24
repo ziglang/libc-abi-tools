@@ -10,22 +10,7 @@ const arches = [_][]const u8{
 const blacklist = [_][]const u8{
     "_init",
     "_fini",
-
-    "_stack",
 };
-
-fn fixType(name: []const u8, ty: u4) u4 {
-    if (std.mem.eql(u8, name, "_sigsetjmp")) return std.elf.STT_FUNC;
-    if (std.mem.eql(u8, name, "sigsetjmp")) return std.elf.STT_FUNC;
-
-    if (std.mem.eql(u8, name, "_setjmp")) return std.elf.STT_FUNC;
-    if (std.mem.eql(u8, name, "setjmp")) return std.elf.STT_FUNC;
-
-    if (std.mem.eql(u8, name, "_longjmp")) return std.elf.STT_FUNC;
-    if (std.mem.eql(u8, name, "longjmp")) return std.elf.STT_FUNC;
-
-    return ty;
-}
 
 const Symbol = struct {
     name: []const u8,
@@ -173,7 +158,7 @@ fn parseElf(parse: *Parse, comptime is_64: bool, comptime endian: std.builtin.En
 
     syms: for (dyn_syms) |sym| {
         const name = try parse.arena.dupe(u8, std.mem.sliceTo(dynstr[Fns.swap(sym.st_name)..], 0));
-        const ty = fixType(name, @as(u4, @truncate(sym.st_info)));
+        const ty = @as(u4, @truncate(sym.st_info));
         const binding = @as(u4, @truncate(sym.st_info >> 4));
         const visib = @as(std.elf.STV, @enumFromInt(@as(u2, @truncate(sym.st_other))));
         const size = Fns.swap(sym.st_size);
