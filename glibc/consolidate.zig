@@ -388,12 +388,12 @@ pub fn main() !void {
     defer glibc_dir.close();
 
     const fs_versions = v: {
-        var fs_versions = std.ArrayList(Version).init(arena);
+        var fs_versions: std.ArrayList(Version) = .{};
 
         var version_dir_it = glibc_dir.iterate();
         while (try version_dir_it.next()) |entry| {
             if (entry.kind != .directory) continue;
-            try fs_versions.append(try Version.parse(entry.name));
+            try fs_versions.append(arena, try Version.parse(entry.name));
         }
 
         break :v fs_versions.items;
@@ -613,7 +613,7 @@ pub fn main() !void {
     // For functions, the only type possibilities are `absent` or `function`.
     // We use a greedy algorithm, "spreading" the inclusion from a single point to
     // as many targets as possible, then to as many versions as possible.
-    var fn_inclusions = std.ArrayList(NamedInclusion).init(arena);
+    var fn_inclusions: std.ArrayList(NamedInclusion) = .{};
     var fn_count: usize = 0;
     var fn_target_popcount: usize = 0;
     var fn_version_popcount: usize = 0;
@@ -714,7 +714,7 @@ pub fn main() !void {
                 fn_target_popcount += @popCount(inc.targets);
                 fn_version_popcount += @popCount(inc.versions);
 
-                try fn_inclusions.append(.{
+                try fn_inclusions.append(arena, .{
                     .name = entry.key_ptr.*,
                     .inc = inc,
                 });
@@ -745,7 +745,7 @@ pub fn main() !void {
         @as(f64, @floatFromInt(fn_version_popcount)) / @as(f64, @floatFromInt(fn_inclusions.items.len)),
     });
 
-    var obj_inclusions = std.ArrayList(NamedInclusion).init(arena);
+    var obj_inclusions: std.ArrayList(NamedInclusion) = .{};
     var obj_count: usize = 0;
     var obj_target_popcount: usize = 0;
     var obj_version_popcount: usize = 0;
@@ -854,7 +854,7 @@ pub fn main() !void {
                 obj_target_popcount += @popCount(inc.targets);
                 obj_version_popcount += @popCount(inc.versions);
 
-                try obj_inclusions.append(.{
+                try obj_inclusions.append(arena, .{
                     .name = entry.key_ptr.*,
                     .inc = inc,
                 });
