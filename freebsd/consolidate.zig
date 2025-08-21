@@ -55,7 +55,7 @@ const zig_targets = [_]ZigTarget{
 };
 
 comptime {
-    assert(zig_targets.len <= @bitSizeOf(std.meta.FieldType(Inclusion, .targets)));
+    assert(zig_targets.len <= @bitSizeOf(@FieldType(Inclusion, "targets")));
 }
 
 const first_fs_ver: std.SemanticVersion = .{
@@ -86,7 +86,7 @@ fn verIndex(ver: std.SemanticVersion) u6 {
 }
 
 comptime {
-    assert(versions.len <= @bitSizeOf(std.meta.FieldType(Inclusion, .versions)));
+    assert(versions.len <= @bitSizeOf(@FieldType(Inclusion, "versions")));
 }
 
 const Symbol = struct {

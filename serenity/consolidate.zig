@@ -35,7 +35,7 @@ const zig_targets = [_]ZigTarget{
 };
 
 comptime {
-    assert(zig_targets.len <= @bitSizeOf(std.meta.FieldType(Inclusion, .targets)));
+    assert(zig_targets.len <= @bitSizeOf(@FieldType(Inclusion, "targets")));
 }
 
 const Symbol = struct {

@@ -83,7 +83,7 @@ const zig_targets = [_]ZigTarget{
 };
 
 comptime {
-    assert(zig_targets.len <= @bitSizeOf(std.meta.FieldType(Inclusion, .targets)));
+    assert(zig_targets.len <= @bitSizeOf(@FieldType(Inclusion, "targets")));
 }
 
 const versions = [_]Version{
@@ -145,7 +145,7 @@ const versions = [_]Version{
 };
 
 comptime {
-    assert(versions.len <= @bitSizeOf(std.meta.FieldType(Inclusion, .versions)));
+    assert(versions.len <= @bitSizeOf(@FieldType(Inclusion, "versions")));
 }
 
 // fpu/nofpu are hardcoded elsewhere, based on .gnueabi/.gnueabihf with an exception for .arm
