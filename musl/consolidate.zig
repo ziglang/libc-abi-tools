@@ -192,7 +192,7 @@ pub fn main() !void {
     var symbols = std.StringHashMap(Symbol).init(arena);
 
     for (fs_versions) |fs_ver| {
-        log.info("scanning abilist files for musl version: {}", .{fs_ver});
+        log.info("scanning abilist files for musl version: {f}", .{fs_ver});
 
         const prefix = try fmt.allocPrint(arena, "{d}.{d}.{d}", .{
             fs_ver.major, fs_ver.minor, fs_ver.patch,

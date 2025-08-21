@@ -410,10 +410,10 @@ pub fn main() !void {
 
     for (fs_versions) |fs_ver| {
         if (fs_ver.order(first_fs_ver) == .lt) {
-            log.warn("skipping glibc version {} because the abilist files have a different format", .{fs_ver});
+            log.warn("skipping glibc version {f} because the abilist files have a different format", .{fs_ver});
             continue;
         }
-        log.info("scanning abilist files for glibc version: {}", .{fs_ver});
+        log.info("scanning abilist files for glibc version: {f}", .{fs_ver});
 
         const prefix = try fmt.allocPrint(arena, "{d}.{d}/sysdeps/unix/sysv/linux", .{
             fs_ver.major, fs_ver.minor,

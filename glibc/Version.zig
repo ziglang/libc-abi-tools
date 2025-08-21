@@ -55,25 +55,15 @@ pub fn parse(text: []const u8) !Version {
     };
 }
 
-pub fn format(
-    self: Version,
-    comptime fmt: []const u8,
-    options: std.fmt.FormatOptions,
-    out_stream: anytype,
-) !void {
-    _ = options;
-    if (fmt.len == 0) {
-        if (self.patch == 0) {
-            if (self.minor == 0) {
-                return std.fmt.format(out_stream, "{d}", .{self.major});
-            } else {
-                return std.fmt.format(out_stream, "{d}.{d}", .{ self.major, self.minor });
-            }
+pub fn format(self: Version, writer: *std.Io.Writer) std.Io.Writer.Error!void {
+    if (self.patch == 0) {
+        if (self.minor == 0) {
+            return writer.print("{d}", .{self.major});
         } else {
-            return std.fmt.format(out_stream, "{d}.{d}.{d}", .{ self.major, self.minor, self.patch });
+            return writer.print("{d}.{d}", .{ self.major, self.minor });
         }
     } else {
-        std.fmt.invalidFmtError(fmt, self);
+        return writer.print("{d}.{d}.{d}", .{ self.major, self.minor, self.patch });
     }
 }
 
