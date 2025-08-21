@@ -808,11 +808,11 @@ pub fn main() !void {
     });
 
     // Serialize to the output file.
-    var af = try fs.cwd().atomicFile("abilists", .{});
+    var buffer: [4096]u8 = undefined;
+    var af = try fs.cwd().atomicFile("abilists", .{ .write_buffer = &buffer });
     defer af.deinit();
 
-    var bw = std.io.bufferedWriter(af.file.writer());
-    const w = bw.writer();
+    const w = &af.file_writer.interface;
 
     // Libraries
     try w.writeByte(lib_names.len);
@@ -978,7 +978,6 @@ pub fn main() !void {
         }
     }
 
-    try bw.flush();
     try af.finish();
 }
 
