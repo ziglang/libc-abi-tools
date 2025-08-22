@@ -21,12 +21,11 @@ pub fn main() !void {
     var file = try std.fs.cwd().openFile(abilists_file_path, .{});
     defer file.close();
 
-    const stdout = std.io.getStdOut();
-    var bw = std.io.bufferedWriter(stdout.writer());
-    const w = bw.writer();
+    var stdout_buffer: [4096]u8 = undefined;
+    var stdout_writer = std.fs.File.stdout().writer(&stdout_buffer);
+    const w = &stdout_writer.interface;
 
-    var br = std.io.bufferedReader(file.reader());
-    const r = br.reader();
+    const r = file.deprecatedReader();
 
     const all_libs = b: {
         try w.writeAll("Libraries:\n");
@@ -263,5 +262,5 @@ pub fn main() !void {
         }
     }
 
-    try bw.flush();
+    try w.flush();
 }
