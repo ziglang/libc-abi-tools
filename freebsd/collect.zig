@@ -119,7 +119,7 @@ pub fn main() !void {
                 .lib = lib.name,
                 .header = header,
                 .elf_bytes = elf_bytes,
-                .symbols = .init(arena),
+                .symbols = .{},
             };
 
             try if (header.is_64) switch (header.endian) {
@@ -344,7 +344,7 @@ fn parseElf(parse: *Parse, comptime is_64: bool, comptime endian: std.builtin.En
             .normal => |n| n,
         } else null;
 
-        try parse.symbols.append(.{
+        try parse.symbols.append(parse.arena, .{
             .name = name,
             .version = ver,
             .kind = switch (ty) {

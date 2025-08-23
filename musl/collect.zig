@@ -87,7 +87,7 @@ pub fn main() !void {
             .arch = arch,
             .header = header,
             .elf_bytes = elf_bytes,
-            .symbols = .init(arena),
+            .symbols = .{},
         };
 
         try if (header.is_64) switch (header.endian) {
@@ -216,7 +216,7 @@ fn parseElf(parse: *Parse, comptime is_64: bool, comptime endian: std.builtin.En
             },
         }
 
-        try parse.symbols.append(.{
+        try parse.symbols.append(parse.arena, .{
             .name = name,
             .kind = switch (ty) {
                 std.elf.STT_FUNC, std.elf.STT_GNU_IFUNC => .func,
