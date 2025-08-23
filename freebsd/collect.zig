@@ -156,11 +156,11 @@ pub fn main() !void {
                 }
             }.lessThan);
 
-            var af = try dest_dir.atomicFile(try std.fmt.allocPrint(arena, "{s}.abilist", .{lib.name}), .{});
+            var buffer: [4096]u8 = undefined;
+            var af = try dest_dir.atomicFile(try std.fmt.allocPrint(arena, "{s}.abilist", .{lib.name}), .{ .write_buffer = &buffer });
             defer af.deinit();
 
-            var bw = std.io.bufferedWriter(af.file.writer());
-            const w = bw.writer();
+            const w = &af.file_writer.interface;
 
             for (parse.symbols.items) |sym| {
                 try w.print("{s} {s} ", .{ sym.version orelse "", sym.name });
@@ -180,7 +180,6 @@ pub fn main() !void {
                 try w.writeByte('\n');
             }
 
-            try bw.flush();
             try af.finish();
         }
     }

@@ -91,11 +91,11 @@ pub fn main() !void {
             }
         }.lessThan);
 
-        var af = try dest_dir.atomicFile("libc.abilist", .{});
+        var buffer: [4096]u8 = undefined;
+        var af = try dest_dir.atomicFile("libc.abilist", .{ .write_buffer = &buffer });
         defer af.deinit();
 
-        var bw = std.io.bufferedWriter(af.file.writer());
-        const w = bw.writer();
+        const w = &af.file_writer.interface;
 
         for (parse.symbols.items) |sym| {
             try w.print(" {s} ", .{sym.name});
@@ -115,7 +115,6 @@ pub fn main() !void {
             try w.writeByte('\n');
         }
 
-        try bw.flush();
         try af.finish();
     }
 }
