@@ -110,7 +110,8 @@ pub fn main() !void {
                 .of(std.elf.Elf64_Ehdr),
                 null,
             );
-            const header = try std.elf.Header.parse(elf_bytes[0..@sizeOf(std.elf.Elf64_Ehdr)]);
+            var reader: std.Io.Reader = .fixed(elf_bytes);
+            const header = try std.elf.Header.read(&reader);
 
             var parse: Parse = .{
                 .arena = arena,
