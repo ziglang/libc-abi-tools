@@ -35,7 +35,7 @@ const zig_targets = [_]ZigTarget{
 };
 
 comptime {
-    assert(zig_targets.len <= @bitSizeOf(std.meta.FieldType(Inclusion, .targets)));
+    assert(zig_targets.len <= @bitSizeOf(@FieldType(Inclusion, "targets")));
 }
 
 const Symbol = struct {
@@ -193,7 +193,7 @@ pub fn main() !void {
     // For functions, the only type possibilities are `absent` or `function`.
     // We use a greedy algorithm, "spreading" the inclusion from a single point to
     // as many targets as possible, then to as many versions as possible.
-    var fn_inclusions = std.ArrayList(NamedInclusion).init(arena);
+    var fn_inclusions: std.ArrayList(NamedInclusion) = .{};
     var fn_count: usize = 0;
     var fn_target_popcount: usize = 0;
     const none_handled = blk: {
@@ -261,7 +261,7 @@ pub fn main() !void {
 
             fn_target_popcount += @popCount(inc.targets);
 
-            try fn_inclusions.append(.{
+            try fn_inclusions.append(arena, .{
                 .name = entry.key_ptr.*,
                 .inc = inc,
             });
@@ -284,7 +284,7 @@ pub fn main() !void {
         @as(f64, @floatFromInt(fn_target_popcount)) / @as(f64, @floatFromInt(fn_inclusions.items.len)),
     });
 
-    var obj_inclusions = std.ArrayList(NamedInclusion).init(arena);
+    var obj_inclusions: std.ArrayList(NamedInclusion) = .{};
     var obj_count: usize = 0;
     var obj_target_popcount: usize = 0;
     {
@@ -356,7 +356,7 @@ pub fn main() !void {
 
             obj_target_popcount += @popCount(inc.targets);
 
-            try obj_inclusions.append(.{
+            try obj_inclusions.append(arena, .{
                 .name = entry.key_ptr.*,
                 .inc = inc,
             });
@@ -379,7 +379,7 @@ pub fn main() !void {
         @as(f64, @floatFromInt(obj_target_popcount)) / @as(f64, @floatFromInt(obj_inclusions.items.len)),
     });
 
-    var tls_inclusions = std.ArrayList(NamedInclusion).init(arena);
+    var tls_inclusions: std.ArrayList(NamedInclusion) = .{};
     var tls_count: usize = 0;
     var tls_target_popcount: usize = 0;
     {
@@ -451,7 +451,7 @@ pub fn main() !void {
 
             tls_target_popcount += @popCount(inc.targets);
 
-            try tls_inclusions.append(.{
+            try tls_inclusions.append(arena, .{
                 .name = entry.key_ptr.*,
                 .inc = inc,
             });
@@ -475,11 +475,11 @@ pub fn main() !void {
     });
 
     // Serialize to the output file.
-    var af = try fs.cwd().atomicFile("abilists", .{});
+    var buffer: [4096]u8 = undefined;
+    var af = try fs.cwd().atomicFile("abilists", .{ .write_buffer = &buffer });
     defer af.deinit();
 
-    var bw = std.io.bufferedWriter(af.file.writer());
-    const w = bw.writer();
+    const w = &af.file_writer.interface;
 
     // Libraries
     try w.writeByte(1);
@@ -589,7 +589,6 @@ pub fn main() !void {
         }
     }
 
-    try bw.flush();
     try af.finish();
 }
 

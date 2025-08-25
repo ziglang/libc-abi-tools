@@ -33,7 +33,7 @@ const Parse = struct {
     arch: []const u8,
     header: std.elf.Header,
     elf_bytes: []align(@alignOf(std.elf.Elf64_Ehdr)) u8,
-    symbols: std.ArrayList(Symbol),
+    symbols: std.Arraylist(Symbol),
 };
 
 pub fn main() !void {
@@ -60,14 +60,15 @@ pub fn main() !void {
             .of(std.elf.Elf64_Ehdr),
             null,
         );
-        const header = try std.elf.Header.parse(elf_bytes[0..@sizeOf(std.elf.Elf64_Ehdr)]);
+        var reader: std.Io.Reader = .fixed(elf_bytes);
+        const header = try std.elf.Header.read(&reader);
 
         var parse: Parse = .{
             .arena = arena,
             .arch = arch,
             .header = header,
             .elf_bytes = elf_bytes,
-            .symbols = .init(arena),
+            .symbols = .{},
         };
 
         try if (header.is_64) switch (header.endian) {
@@ -90,11 +91,11 @@ pub fn main() !void {
             }
         }.lessThan);
 
-        var af = try dest_dir.atomicFile("libc.abilist", .{});
+        var buffer: [4096]u8 = undefined;
+        var af = try dest_dir.atomicFile("libc.abilist", .{ .write_buffer = &buffer });
         defer af.deinit();
 
-        var bw = std.io.bufferedWriter(af.file.writer());
-        const w = bw.writer();
+        const w = &af.file_writer.interface;
 
         for (parse.symbols.items) |sym| {
             try w.print(" {s} ", .{sym.name});
@@ -114,7 +115,6 @@ pub fn main() !void {
             try w.writeByte('\n');
         }
 
-        try bw.flush();
         try af.finish();
     }
 }
@@ -199,7 +199,7 @@ fn parseElf(parse: *Parse, comptime is_64: bool, comptime endian: std.builtin.En
             },
         }
 
-        try parse.symbols.append(.{
+        try parse.symbols.append(parse.arena, .{
             .name = name,
             .kind = switch (ty) {
                 std.elf.STT_FUNC, std.elf.STT_GNU_IFUNC => .func,
