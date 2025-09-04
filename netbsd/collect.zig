@@ -279,7 +279,7 @@ fn parseElf(parse: *Parse, comptime is_64: bool, comptime endian: std.builtin.En
         const name = try parse.arena.dupe(u8, std.mem.sliceTo(dynstr[Fns.swap(sym.st_name)..], 0));
         const ty = fixType(name, @as(u4, @truncate(sym.st_info)));
         const binding = @as(u4, @truncate(sym.st_info >> 4));
-        const visib = @as(std.elf.STV, @enumFromInt(@as(u2, @truncate(sym.st_other))));
+        const visib = @as(std.elf.STV, @enumFromInt(@as(u3, @truncate(sym.st_other))));
         const size = fixSize(name, Fns.swap(sym.st_size));
 
         for (blacklist) |bl_name| {
