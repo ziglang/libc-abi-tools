@@ -578,7 +578,7 @@ pub fn main() !void {
 
     // Serialize to the output file.
     var buffer: [4096]u8 = undefined;
-    var af = try fs.cwd().atomicFile("abilists", .{ .write_buffer = buffer });
+    var af = try fs.cwd().atomicFile("abilists", .{ .write_buffer = &buffer });
     defer af.deinit();
 
     const w = &af.file_writer.interface;
