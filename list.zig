@@ -25,14 +25,16 @@ pub fn main() !void {
     var stdout_writer = std.fs.File.stdout().writer(&stdout_buffer);
     const w = &stdout_writer.interface;
 
-    const r = file.deprecatedReader();
+    var read_buffer: [4096]u8 = undefined;
+    var file_reader = file.reader(&read_buffer);
+    const r = &file_reader.interface;
 
     const all_libs = b: {
         try w.writeAll("Libraries:\n");
-        const libs_len = try r.readByte();
+        const libs_len = try r.takeByte();
         var i: u8 = 0;
         while (i < libs_len) : (i += 1) {
-            const lib_name = try r.readUntilDelimiterAlloc(arena, 0, 100);
+            const lib_name = try arena.dupe(u8, try r.takeSentinel(0));
             try w.print(" {d} lib{s}.so\n", .{ i, lib_name });
             lib_names_buffer[i] = lib_name;
         }
@@ -41,12 +43,12 @@ pub fn main() !void {
 
     const all_versions = b: {
         try w.writeAll("Versions:\n");
-        const versions_len = try r.readByte();
+        const versions_len = try r.takeByte();
         var i: u8 = 0;
         while (i < versions_len) : (i += 1) {
-            const major = try r.readByte();
-            const minor = try r.readByte();
-            const patch = try r.readByte();
+            const major = try r.takeByte();
+            const minor = try r.takeByte();
+            const patch = try r.takeByte();
             if (patch == 0) {
                 try w.print(" {d} {d}.{d}\n", .{ i, major, minor });
             } else {
@@ -59,10 +61,10 @@ pub fn main() !void {
 
     const all_targets = b: {
         try w.writeAll("Targets:\n");
-        const targets_len = try r.readByte();
+        const targets_len = try r.takeByte();
         var i: u8 = 0;
         while (i < targets_len) : (i += 1) {
-            const target_name = try r.readUntilDelimiterAlloc(arena, 0, 100);
+            const target_name = try arena.dupe(u8, try r.takeSentinel(0));
             try w.print(" {d} {s}\n", .{ i, target_name });
             target_names_buffer[i] = target_name;
         }
@@ -71,18 +73,18 @@ pub fn main() !void {
 
     {
         try w.writeAll("Function Symbols:\n");
-        const fns_len = try r.readInt(u16, .little);
+        const fns_len = try r.takeInt(u16, .little);
         var i: u16 = 0;
         var opt_symbol_name: ?[]const u8 = null;
         while (i < fns_len) : (i += 1) {
             const symbol_name = opt_symbol_name orelse n: {
-                const name = try r.readUntilDelimiterAlloc(arena, 0, 100);
+                const name = try arena.dupe(u8, try r.takeSentinel(0));
                 opt_symbol_name = name;
                 break :n name;
             };
             try w.print(" {s}:\n", .{symbol_name});
-            const targets = try std.leb.readUleb128(u64, r);
-            var lib_index = try r.readByte();
+            const targets = try r.takeLeb128(u64);
+            var lib_index = try r.takeByte();
             const is_unversioned = (lib_index & (1 << 5)) != 0;
             if (is_unversioned) {
                 lib_index &= ~@as(u8, 1 << 5);
@@ -100,7 +102,7 @@ pub fn main() !void {
             var ver_buf: [128]u8 = undefined;
             var ver_buf_index: usize = 0;
             while (true) {
-                const byte = try r.readByte();
+                const byte = try r.takeByte();
                 const last = (byte & 0b1000_0000) != 0;
                 ver_buf[ver_buf_index] = @as(u7, @truncate(byte));
                 ver_buf_index += 1;
@@ -134,19 +136,19 @@ pub fn main() !void {
 
     {
         try w.writeAll("Object Symbols:\n");
-        const objects_len = try r.readInt(u16, .little);
+        const objects_len = try r.takeInt(u16, .little);
         var i: u16 = 0;
         var opt_symbol_name: ?[]const u8 = null;
         while (i < objects_len) : (i += 1) {
             const symbol_name = opt_symbol_name orelse n: {
-                const name = try r.readUntilDelimiterAlloc(arena, 0, 100);
+                const name = try r.takeSentinel(0);
                 opt_symbol_name = name;
                 break :n name;
             };
             try w.print(" {s}:\n", .{symbol_name});
-            const targets = try std.leb.readUleb128(u64, r);
-            const size = try std.leb.readUleb128(u16, r);
-            var lib_index = try r.readByte();
+            const targets = try r.takeLeb128(u64);
+            const size = try r.takeLeb128(u16);
+            var lib_index = try r.takeByte();
             const is_unversioned = (lib_index & (1 << 5)) != 0;
             if (is_unversioned) {
                 lib_index &= ~@as(u8, 1 << 5);
@@ -164,7 +166,7 @@ pub fn main() !void {
             var ver_buf: [128]u8 = undefined;
             var ver_buf_index: usize = 0;
             while (true) {
-                const byte = try r.readByte();
+                const byte = try r.takeByte();
                 const last = (byte & 0b1000_0000) != 0;
                 ver_buf[ver_buf_index] = @as(u7, @truncate(byte));
                 ver_buf_index += 1;
@@ -199,19 +201,19 @@ pub fn main() !void {
 
     {
         try w.writeAll("TLS Symbols:\n");
-        const objects_len = try r.readInt(u16, .little);
+        const objects_len = try r.takeInt(u16, .little);
         var i: u16 = 0;
         var opt_symbol_name: ?[]const u8 = null;
         while (i < objects_len) : (i += 1) {
             const symbol_name = opt_symbol_name orelse n: {
-                const name = try r.readUntilDelimiterAlloc(arena, 0, 100);
+                const name = try r.takeSentinel(0);
                 opt_symbol_name = name;
                 break :n name;
             };
             try w.print(" {s}:\n", .{symbol_name});
-            const targets = try std.leb.readUleb128(u64, r);
-            const size = try std.leb.readUleb128(u16, r);
-            var lib_index = try r.readByte();
+            const targets = try r.takeLeb128(u64);
+            const size = try r.takeLeb128(u16);
+            var lib_index = try r.takeByte();
             const is_unversioned = (lib_index & (1 << 5)) != 0;
             if (is_unversioned) {
                 lib_index &= ~@as(u8, 1 << 5);
@@ -229,7 +231,7 @@ pub fn main() !void {
             var ver_buf: [128]u8 = undefined;
             var ver_buf_index: usize = 0;
             while (true) {
-                const byte = try r.readByte();
+                const byte = try r.takeByte();
                 const last = (byte & 0b1000_0000) != 0;
                 ver_buf[ver_buf_index] = @as(u7, @truncate(byte));
                 ver_buf_index += 1;
